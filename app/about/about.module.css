@@ -1,0 +1,89 @@
+/* About Page */
+.about {
+  max-width: var(--max-width-article);
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6) var(--space-20);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.aboutLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  margin-bottom: var(--space-4);
+}
+
+.aboutTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-8);
+}
+
+.aboutContent {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: var(--leading-loose);
+  color: var(--color-text-secondary);
+}
+
+.aboutContent p {
+  margin-bottom: var(--space-6);
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-accent);
+  border: none;
+  margin: var(--space-10) 0;
+  border-radius: var(--radius-full);
+}
+
+.techStack {
+  margin-top: var(--space-8);
+}
+
+.techTitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  margin-bottom: var(--space-4);
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.techBadge {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-card);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.techBadge:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .about { padding: var(--space-10) var(--space-4) var(--space-16); }
+  .aboutTitle { font-size: var(--text-3xl); }
+  .aboutContent { font-size: var(--text-base); }
+}
