@@ -27,8 +27,7 @@ export default async function ArtikelPage() {
         <p className={styles.pageLabel}>Koleksi</p>
         <h1 className={styles.pageTitle}>Semua Artikel</h1>
         <p className={styles.pageDesc}>
-          Telusuri seluruh koleksi artikel naratif mendalam tentang sejarah
-          dan peristiwa penting Indonesia.
+          Kumpulan artikel didunia Bisnis digital dan teknologi informasi
         </p>
         <span className={styles.articleCount}>
           {allArticles.length} artikel tersedia
@@ -55,6 +54,9 @@ export default async function ArtikelPage() {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h2 className={styles.cardTitle}>{article.title}</h2>
+              <div className={styles.cardImage}>
+                <img src={article.imageUrl} alt={article.title} />
+              </div>
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardFooter}>
                 <span className={styles.cardDate}>
