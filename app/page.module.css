@@ -9,7 +9,8 @@
   background: var(--gradient-hero);
   overflow: hidden;
   min-height: 25rem;
-  padding: 0%;
+  padding: 0% 5%;
+  margin: 0% 0%;
 }
 
 .heroOverlay {
@@ -32,10 +33,10 @@
   background: transparent;
   padding: var(--space-10) var(--space-6);
   gap: var(--space-10);
-  animation: fadeInUp 0.8s ease-out;
   padding-bottom: 0%;
   padding-left: 50px;
   padding-right: 50px;
+  max-height: 90vh;
 }
 
 .heroText {
@@ -157,11 +158,545 @@
   /* Softer depth */
 }
 
+/* --- Alasan Punya Web Section --- */
+.alasanSection {
+  padding: 0 var(--space-6) var(--space-10);
+  max-width: var(--max-width-content);
+  margin: 0 5%;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+}
+
+.alasanContainer {
+  background: #199A46;
+  border-radius: 40px;
+  padding: var(--space-12) var(--space-10);
+  display: flex;
+  gap: var(--space-12);
+  align-items: stretch;
+}
+
+.alasanLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.alasanTitle {
+  font-family: var(--font-sans);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #DFFF00;
+  margin-bottom: var(--space-6);
+  text-transform: uppercase;
+}
+
+.alasanDesc {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+.alasanRight {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.alasanItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-6);
+  row-gap: var(--space-2);
+  align-items: center;
+}
+
+.alasanNumber {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 0.8;
+}
+
+.alasanPill {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  background: #E5E7EB;
+  color: #111827;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+}
+
+.alasanItemText {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  font-family: var(--font-sans);
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* --- Lebih Dari Section --- */
+.lebihDariSection {
+  padding: var(--space-10) var(--space-6);
+  max-width: var(--max-width-content);
+  margin: 0 5%;
+  border-radius: 40px;
+}
+
+.lebihDariHeader {
+  display: flex;
+  gap: var(--space-10);
+  align-items: flex-start;
+  margin-bottom: var(--space-10);
+  padding: 0 var(--space-4);
+}
+
+.lebihDariTitle {
+  font-family: var(--font-sans);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1A2942;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.lebihDariDesc {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+}
+
+.lebihDariList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+  padding: 0 var(--space-4);
+}
+
+.lebihDariItem {
+  background: #FFFFFF;
+  border: 2px solid var(--color-border);
+  border-radius: 20px;
+  padding: var(--space-5) var(--space-4);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+}
+
+.lebihDariItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: var(--color-accent);
+}
+
+.lebihDariIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lebihDariIcon svg {
+  width: 26px;
+  height: 26px;
+  color: #2E7D32;
+}
+
+.lebihDariItemTitle {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1A2942;
+}
+
+.lebihDariItemText {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* --- Cara Kerja Section --- */
+.caraKerjaSection {
+  max-width: var(--max-width-content);
+  margin: var(--space-10) auto;
+  padding: var(--space-12) var(--space-10);
+  background: #1A2942;
+  border-radius: 40px;
+  margin: 0 5%;
+}
+
+.caraKerjaTitle {
+  font-family: var(--font-sans);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: var(--space-10);
+  line-height: 1.2;
+}
+
+.caraKerjaFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.caraKerjaPair {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+/* Step card */
+.caraKerjaStep {
+  flex: 1;
+  background: transparent;
+  border: 2px solid #C87533;
+  border-radius: 16px;
+  padding: var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.caraKerjaStep:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.caraKerjaContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.caraKerjaText {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Horizontal arrows (→) between steps in a pair */
+.caraKerjaArrow {
+  font-size: 1.5rem;
+  color: #C87533;
+  font-weight: 700;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Down arrows (↓) between pairs */
+.caraKerjaDown {
+  font-size: 1.5rem;
+  color: #C87533;
+  font-weight: 700;
+  user-select: none;
+  padding: var(--space-1) 0;
+}
+
+.caraKerjaNumber {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #2E7D32;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.caraKerjaLabel {
+  font-weight: 700;
+  font-style: italic;
+  color: #4CAF50;
+  font-family: var(--font-sans);
+  font-size: 1.7rem;
+}
+
+/* --- Layanan Section --- */
+.layananSection {
+  max-width: var(--max-width-content);
+  margin: var(--space-10) auto;
+  padding: var(--space-12) var(--space-10);
+  background: var(--color-bg-tertiary);
+  border-radius: 40px;
+  overflow: hidden;
+  margin: 5% 5%;
+}
+
+.layananTitle {
+  font-family: var(--font-sans);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #1A2942;
+  margin-bottom: var(--space-10);
+  line-height: 1.2;
+}
+
+.layananContainer {
+  display: flex;
+  gap: var(--space-10);
+  align-items: flex-start;
+}
+
+.layananLeft {
+  flex: 1;
+  display: flex;
+  gap: var(--space-4);
+  align-items: stretch;
+  padding-left: 5%;
+}
+
+.layananAccent {
+  width: 6px;
+  flex-shrink: 0;
+  background: #199A46;
+  border-radius: var(--radius-full);
+}
+
+.layananList {
+  list-style: disc;
+  padding-left: var(--space-5);
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1A2942;
+  line-height: 2;
+}
+
+.layananList li::marker {
+  color: #1A2942;
+}
+
+.layananRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.layananPreview {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3px solid var(--color-border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background: #FFFFFF;
+}
+
+.layananIframe {
+  width: 200%;
+  height: 200%;
+  border: none;
+  transform: scale(0.5);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.layananCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFF00;
+  color: #1A2942;
+  padding: var(--space-3) var(--space-8);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.layananCta:hover {
+  transform: translateY(-2px);
+  background: #FFEA00;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Testimoni Section --- */
+.testimoniSection {
+  max-width: var(--max-width-content);
+  margin: var(--space-10) auto;
+  padding: var(--space-12) var(--space-10);
+  background: #1A2942;
+  border-radius: 40px;
+}
+
+.testimoniTitle {
+  font-family: var(--font-sans);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: var(--space-10);
+  line-height: 1.2;
+}
+
+.testimoniGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+.testimoniCard {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.testimoniCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.testimoniQuote {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #374151;
+  flex: 1;
+}
+
+.testimoniFooter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.testimoniAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.testimoniStars {
+  color: #F59E0B;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.testimoniName {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1A2942;
+}
+
+.testimoniRole {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: #6B7280;
+}
+
+/* --- CTA Section --- */
+.ctaSection {
+  max-width: var(--max-width-content);
+  margin: var(--space-10) auto;
+  padding: var(--space-16) var(--space-10);
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-sans);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1A2942;
+  line-height: 1.3;
+  margin-bottom: var(--space-10);
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-8);
+  background: #FFFFFF;
+  color: #1A2942;
+  border: 2px solid #199A46;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.ctaWhatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(25, 154, 70, 0.2);
+  background: #F0FFF4;
+}
+
+.ctaIcon {
+  width: 28px;
+  height: 28px;
+  color: #25D366;
+  flex-shrink: 0;
+}
+
 /* --- Latest Articles Section --- */
 .latestSection {
   padding: var(--space-20) var(--space-6);
   max-width: var(--max-width-content);
-  margin: 0 auto;
+  margin: 0 5%;
 }
 
 .sectionHeader {
@@ -307,6 +842,17 @@
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
+  .heroContainer {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+    gap: var(--space-6);
+  }
+
+  .heroImage {
+    max-width: 380px;
+    width: 100%;
+  }
+
   .articlesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -314,11 +860,66 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh;
+    min-height: auto;
+    padding: var(--space-6) 0;
+  }
+
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-8) var(--space-4);
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+    max-height: none;
+    gap: var(--space-6);
+  }
+
+  .heroText {
+    text-align: center;
+    max-width: 100%;
   }
 
   .heroTitle {
-    font-size: var(--text-4xl);
+    font-size: clamp(2.25rem, 7.5vw, 3.25rem);
+  }
+
+  .heroDesc {
+    font-size: var(--text-lg);
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .heroImageContainer {
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .heroImage {
+    width: 80%;
+    max-width: 320px;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .alasanContainer {
+    flex-direction: column;
+    padding: var(--space-8) var(--space-6);
+    border-radius: 24px;
+    gap: var(--space-8);
+  }
+
+  .alasanTitle {
+    font-size: 3rem;
+  }
+
+  .alasanNumber {
+    font-size: 3.5rem;
+  }
+
+  .alasanPill {
+    font-size: 2rem;
   }
 
   .articlesGrid {
@@ -329,14 +930,285 @@
     flex-direction: column;
     gap: var(--space-4);
   }
+
+  .lebihDariSection {
+    border-radius: 24px;
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .lebihDariHeader {
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .lebihDariTitle {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .lebihDariDesc {
+    font-size: 1rem;
+  }
+
+  .lebihDariItem {
+    padding: var(--space-4) var(--space-5);
+    border-radius: 14px;
+  }
+
+  .lebihDariList {
+    grid-template-columns: 1fr;
+  }
+
+  .lebihDariIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .lebihDariIcon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .lebihDariItemTitle {
+    font-size: 1.5rem;
+  }
+
+  .lebihDariItemText {
+    font-size: var(--text-sm);
+  }
+
+  .caraKerjaSection {
+    border-radius: 24px;
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .caraKerjaTitle {
+    font-size: 2rem;
+  }
+
+  .caraKerjaPair {
+    gap: var(--space-2);
+  }
+
+  .caraKerjaStep {
+    padding: var(--space-3);
+  }
+
+  .caraKerjaNumber {
+    font-size: 1.5rem;
+  }
+
+  .caraKerjaLabel {
+    font-size: 1.4rem;
+  }
+
+  .caraKerjaText {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .caraKerjaArrow {
+    font-size: 1.2rem;
+  }
+
+  .caraKerjaDown {
+    font-size: 1.2rem;
+  }
+
+  .layananSection {
+    border-radius: 24px;
+    padding: var(--space-8) var(--space-5);
+  }
+
+  .layananTitle {
+    font-size: 3rem;
+  }
+
+  .layananContainer {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .layananList {
+    font-size: 2rem;
+  }
+
+  .layananPreview {
+    aspect-ratio: 16 / 9;
+  }
+
+  .testimoniSection {
+    border-radius: 24px;
+    padding: var(--space-8) var(--space-5);
+  }
+
+  .testimoniTitle {
+    font-size: 1.75rem;
+  }
+
+  .testimoniGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .testimoniCard {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .ctaSection {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
   .heroTitle {
-    font-size: var(--text-3xl);
+    font-size: 2.5rem;
+    letter-spacing: 0;
   }
 
-  .heroContent {
-    padding: var(--space-10) var(--space-4);
+  .heroDesc {
+    font-size: var(--text-xl);
+  }
+
+  .heroImage {
+    width: 70%;
+    max-width: 260px;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-lg);
+    width: 100%;
+  }
+
+  .alasanTitle {
+    font-size: 3rem;
+  }
+
+  .alasanNumber {
+    font-size: 2.5rem;
+  }
+
+  .alasanPill {
+    font-size: var(--text-lg);
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .alasanItemText {
+    font-size: var(--text-sm);
+  }
+
+  .lebihDariTitle {
+    font-size: 3.25rem;
+  }
+
+  .lebihDariDesc {
+    font-size: var(--text-sm);
+  }
+
+  .lebihDariItemTitle {
+    font-size: 25px;
+    color: var(--color-text-highlight);
+  }
+
+  .lebihDariList {
+    grid-template-columns: 1fr;
+  }
+
+  .lebihDariIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lebihDariIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .lebihDariItemText {
+    font-size: 0.7rem;
+  }
+
+  .caraKerjaTitle {
+    font-size: 1.75rem;
+  }
+
+  .caraKerjaStep {
+    padding: var(--space-2);
+    gap: var(--space-2);
+    border-radius: 10px;
+  }
+
+  .caraKerjaNumber {
+    font-size: 1.2rem;
+  }
+
+  .caraKerjaLabel {
+    font-size: 1.25rem;
+  }
+
+  .caraKerjaText {
+    font-size: 0.7rem;
+  }
+
+  .caraKerjaArrow,
+  .caraKerjaDown {
+    font-size: 1rem;
+  }
+
+  .layananTitle {
+    font-size: rem;
+  }
+
+  .layananList {
+    font-size: var(--text-lg);
+    line-height: 1.8;
+  }
+
+  .layananCta {
+    width: 100%;
+    font-size: var(--text-lg);
+  }
+
+  .testimoniTitle {
+    font-size: 1.35rem;
+  }
+
+  .testimoniQuote {
+    font-size: var(--text-sm);
+  }
+
+  .testimoniAvatar {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-sm);
+  }
+
+  .testimoniName {
+    font-size: var(--text-sm);
+  }
+
+  .testimoniRole {
+    font-size: var(--text-xs);
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaWhatsapp {
+    font-size: var(--text-xl);
+    padding: var(--space-3) var(--space-6);
+  }
+
+  .ctaIcon {
+    width: 22px;
+    height: 22px;
   }
 }

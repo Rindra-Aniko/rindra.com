@@ -166,7 +166,8 @@
   cursor: pointer;
   padding: var(--space-2);
   color: var(--color-text-primary);
-  transition: color var(--transition-fast);
+  transition: transform 0.2s ease;
+  z-index: 1000;
 }
 
 .menuButton:hover {
@@ -176,16 +177,41 @@
 .menuIcon {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  width: 22px;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
 }
 
 .menuIcon span {
   display: block;
-  height: 2px;
+  height: 3px;
   background-color: currentColor;
   border-radius: var(--radius-full);
-  transition: transform var(--transition-base), opacity var(--transition-fast);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s, width 0.4s;
+  transform-origin: left center;
+}
+
+.menuIcon span:nth-child(1) { width: 100%; }
+.menuIcon span:nth-child(2) { width: 70%; }
+.menuIcon span:nth-child(3) { width: 100%; }
+
+.menuButton:hover .menuIcon span:nth-child(2) {
+  width: 100%;
+}
+
+.menuOpen .menuIcon span:nth-child(1) {
+  transform: rotate(45deg) translateY(-2px);
+  width: 100%;
+}
+
+.menuOpen .menuIcon span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+.menuOpen .menuIcon span:nth-child(3) {
+  transform: rotate(-45deg) translateY(2px);
+  width: 100%;
 }
 
 /* --- Responsive --- */
