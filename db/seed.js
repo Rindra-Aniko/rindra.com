@@ -115,7 +115,10 @@ async function seed() {
 
   try {
     for (const article of seedData) {
-      await db.insert(articles).values(article);
+      await client.execute({
+        sql: `INSERT INTO articles (title, slug, excerpt, content) VALUES (?, ?, ?, ?)`,
+        args: [article.title, article.slug, article.excerpt, article.content],
+      });
       console.log(`  ✅ Artikel ditambahkan: "${article.title}"`);
     }
 

@@ -25,9 +25,7 @@ export default async function HomePage() {
             Melalui Narasi Mendalam
           </h1>
           <p className={styles.heroDesc}>
-            Kumpulan artikel naratif yang membawa Anda menjelajahi
-            peristiwa-peristiwa bersejarah Indonesia dengan gaya bercerita
-            yang mendalam dan penuh makna.
+            Kumpulan artikel didunia Bisnis digital dan teknologi informasi.
           </p>
           <Link href="/artikel" className={styles.heroCta}>
             Jelajahi Artikel
@@ -59,6 +57,10 @@ export default async function HomePage() {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className={styles.cardTitle}>{article.title}</h3>
+              <picture className={styles.cardImage}>
+                <img src={article.imageUrl} alt={article.title} />
+              </picture>
+
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardMeta}>
                 <span className={styles.cardDate}>
