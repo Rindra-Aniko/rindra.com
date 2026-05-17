@@ -19,5 +19,14 @@ export const articles = sqliteTable("articles", {
   slug: text("slug").unique().notNull(),
   excerpt: text("excerpt"),
   content: text("content"),
+  imageUrl: text("image_url"),
+  metaDescription: text("meta_description"),
+  createdAt: text("created_at").default(sql`(CURRENT_TIMESTAMP)`),
+});
+
+export const admins = sqliteTable("admins", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  username: text("username").unique().notNull(),
+  password: text("password").notNull(),
   createdAt: text("created_at").default(sql`(CURRENT_TIMESTAMP)`),
 });

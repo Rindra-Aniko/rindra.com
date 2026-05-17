@@ -14,11 +14,13 @@
     "db:seed": "node db/seed.js"
   },
   "dependencies": {
+    "@libsql/client": "^0.15.8",
+    "bcryptjs": "^3.0.3",
+    "drizzle-orm": "^0.44.2",
+    "jose": "^6.2.3",
     "next": "^15.3.3",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "@libsql/client": "^0.15.8",
-    "drizzle-orm": "^0.44.2"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "drizzle-kit": "^0.31.1"
