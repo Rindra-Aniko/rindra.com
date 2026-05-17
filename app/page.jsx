@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { db } from "@/db/db";
 import { articles } from "@/db/schema";
 import { desc } from "drizzle-orm";
 import styles from "./page.module.css";
+import rindraImg from "./asset/rindra.svg";
 
 export default async function HomePage() {
   const latestArticles = await db
@@ -16,21 +18,33 @@ export default async function HomePage() {
       {/* Hero Section */}
       <section className={styles.hero} id="hero">
         <div className={styles.heroOverlay} />
-        <div className={styles.heroContent}>
-          <span className={styles.heroLabel}>Portal Membaca</span>
-          <h1 className={styles.heroTitle}>
-            Menyelami{" "}
-            <span className={styles.heroTitleAccent}>Sejarah</span>
-            <br />
-            Melalui Narasi Mendalam
-          </h1>
-          <p className={styles.heroDesc}>
-            Kumpulan artikel didunia Bisnis digital dan teknologi informasi.
-          </p>
-          <Link href="/artikel" className={styles.heroCta}>
-            Jelajahi Artikel
-            <span className={styles.ctaArrow}>→</span>
-          </Link>
+        <div className={styles.heroContainer}>
+          <div className={styles.heroText}>
+            <h1 className={styles.heroTitle}>
+              PAKET LENGKAP<br />
+              WEBSITE<br />
+              PROFESIONAL
+            </h1>
+            <p className={styles.heroDesc}>
+              Desain Modern, Mudah Ditemukan di Pencarian & Bahasa yang Menjual
+            </p>
+            <div className={styles.heroButtons}>
+              <Link href="/paket" className={styles.btnPrimary}>
+                LIHAT PAKET
+              </Link>
+              <Link href="/portofolio" className={styles.btnSecondary}>
+                LIHAT PORTOFOLIO
+              </Link>
+            </div>
+          </div>
+          <div className={styles.heroImageContainer}>
+            <Image
+              src={rindraImg}
+              alt="Rindra Aniko"
+              className={styles.heroImage}
+              priority
+            />
+          </div>
         </div>
       </section>
 
