@@ -24,10 +24,10 @@ export async function generateMetadata({ params }) {
 
   return {
     title: article.title,
-    description: article.excerpt || `Baca artikel "${article.title}" di rindra.com`,
+    description: article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di rindra.com`,
     openGraph: {
       title: article.title,
-      description: article.excerpt || `Baca artikel "${article.title}" di rindra.com`,
+      description: article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di rindra.com`,
       type: "article",
       publishedTime: article.createdAt,
       siteName: "Rindra.com",
@@ -98,6 +98,15 @@ export default async function ArticleDetailPage({ params }) {
           <p className={styles.articleExcerpt}>{article.excerpt}</p>
         )}
       </header>
+
+      {/* Article Image Banner */}
+      {article.imageUrl && (
+        <img
+          src={article.imageUrl}
+          alt={article.title}
+          className={styles.bannerImage}
+        />
+      )}
 
       {/* Article Body */}
       <div className={styles.articleBody}>{renderContent(article.content)}</div>
