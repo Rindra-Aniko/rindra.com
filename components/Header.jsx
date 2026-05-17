@@ -6,20 +6,32 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.headerInner}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoIcon}>R</span>
           <span className={styles.logoText}>
-            rindra<span className={styles.logoDot}>.</span>com
+            rinthra<span className={styles.logoDot}>.</span>com
           </span>
         </Link>
 
         <nav className={styles.nav} id="main-nav">
+          <Link href="/" className={styles.navLink}>
+            Home
+          </Link>
+          <Link href="/about" className={styles.navLink}>
+            Tentang Saya
+          </Link>
+          <Link href="/portofolio" className={styles.navLink}>
+            Portofolio
+          </Link>
+          <Link href="/paket" className={styles.navLink}>
+            Paket/Layanan
+          </Link>
           <Link href="/artikel" className={styles.navLink}>
             Artikel
           </Link>
-          <Link href="/about" className={styles.navLink}>
-            About
-          </Link>
         </nav>
+
+        <div className={styles.headerRight}>
+          <button className={styles.btnWhatsapp}>Konsultasi Gratis</button>
+        </div>
       </div>
     </header>
   );
