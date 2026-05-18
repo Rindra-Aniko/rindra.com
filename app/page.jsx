@@ -19,7 +19,7 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <AnimatedSection className={styles.hero} id="hero" delay={0.1}>
+      <section className={styles.hero} id="hero">
         <div className={styles.heroOverlay} />
         <div className={styles.heroContainer}>
           <div className={styles.heroText}>
@@ -49,7 +49,7 @@ export default async function HomePage() {
             />
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
       {/* Alasan Punya Web Section */}
       <AnimatedSection className={styles.alasanSection} id="alasan-web" delay={0.2}>
