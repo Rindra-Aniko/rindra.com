@@ -1,0 +1,156 @@
+/* ===================================
+   PORTFOLIO PAGE STYLES
+   rindra.com — Premium Hero Section
+   =================================== */
+
+.heroSection {
+  position: relative;
+  background: transparent;
+  padding: var(--space-16) 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: var(--z-base);
+  max-width: var(--max-width-content);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-8);
+  gap: var(--space-16);
+  flex-direction: row;
+}
+
+.heroText {
+  flex: 1.2;
+  max-width: 650px;
+  text-align: left;
+}
+
+.heroTitle {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+  letter-spacing: var(--tracking-tight);
+}
+
+.titleHighlight {
+  color: var(--color-accent);
+}
+
+.heroSubtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 3.2vw, 1.875rem);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+  letter-spacing: var(--tracking-tight);
+}
+
+.heroDesc {
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  font-weight: 500;
+  line-height: var(--leading-relaxed);
+  color: var(--color-accent);
+  margin-bottom: 0;
+}
+
+.heroDesc strong {
+  font-weight: 800;
+  color: var(--color-accent-hover);
+}
+
+.heroImageContainer {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 8px solid var(--color-bg-primary); /* visible white border in mockup */
+  overflow: hidden;
+  transition: transform var(--transition-slow) var(--transition-spring), 
+              box-shadow var(--transition-slow) var(--transition-spring);
+}
+
+.imageWrapper:hover {
+  transform: scale(1.03) rotate(0.5deg);
+  box-shadow: 0 30px 60px rgba(46, 125, 50, 0.18), 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.heroImage {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .heroContainer {
+    gap: var(--space-10);
+    padding: 0 var(--space-6);
+  }
+  .imageWrapper {
+    max-width: 360px;
+    border-width: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: var(--space-10) 0 var(--space-6);
+  }
+  
+  .heroContainer {
+    flex-direction: column-reverse; /* text at the bottom, image at the top */
+    text-align: center;
+    gap: var(--space-10);
+  }
+
+  .heroText {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .heroImageContainer {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .imageWrapper {
+    max-width: 300px;
+    border-width: 6px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.06);
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    max-width: 250px;
+    border-width: 5px;
+  }
+}
