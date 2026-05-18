@@ -273,6 +273,7 @@
   position: relative;
   width: 100%;
   max-width: 480px;
+  aspect-ratio: 1376 / 768;
   border-radius: 24px;
   overflow: hidden;
   border: 1.5px solid rgba(0, 0, 0, 0.08);
@@ -438,10 +439,15 @@
   margin-bottom: var(--space-2);
 }
 
-.semrushLogo,
+.semrushLogo {
+  height: 55px;
+  width: 126px;
+  object-fit: contain;
+}
+
 .yoastLogo {
   height: 55px;
-  width: auto;
+  width: 55px;
   object-fit: contain;
 }
 
@@ -540,6 +546,7 @@
 .softSkillIcon {
   height: 64px;
   width: auto;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
   transition: transform var(--transition-slow) var(--transition-spring);
 }
