@@ -314,9 +314,9 @@ export default async function HomePage() {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className={styles.cardTitle}>{article.title}</h3>
-              <picture className={styles.cardImage}>
-                <img src={article.imageUrl} alt={article.title} />
-              </picture>
+              <div className={styles.cardImage}>
+                <Image src={article.imageUrl} alt={article.title} width={800} height={450} />
+              </div>
 
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardMeta}>

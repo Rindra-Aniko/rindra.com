@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { db } from "@/db/db";
 import { articles } from "@/db/schema";
@@ -101,10 +102,13 @@ export default async function ArticleDetailPage({ params }) {
 
       {/* Article Image Banner */}
       {article.imageUrl && (
-        <img
+        <Image
           src={article.imageUrl}
           alt={article.title}
           className={styles.bannerImage}
+          width={1200}
+          height={630}
+          priority
         />
       )}
 

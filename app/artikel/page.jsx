@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { db } from "@/db/db";
 import { articles } from "@/db/schema";
 import { desc } from "drizzle-orm";
@@ -55,7 +56,7 @@ export default async function ArtikelPage() {
               </span>
               <h2 className={styles.cardTitle}>{article.title}</h2>
               <div className={styles.cardImage}>
-                <img src={article.imageUrl} alt={article.title} />
+                <Image src={article.imageUrl} alt={article.title} width={800} height={450} />
               </div>
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardFooter}>
