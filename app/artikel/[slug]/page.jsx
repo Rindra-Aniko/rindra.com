@@ -86,7 +86,7 @@ export default async function ArticleDetailPage({ params }) {
 
       {/* Article Header */}
       <header className={styles.articleHeader}>
-        <time className={styles.articleDate} dateTime={article.createdAt}>
+        <time className={styles.articleDate} dateTime={article.createdAt} suppressHydrationWarning>
           {new Date(article.createdAt).toLocaleDateString("id-ID", {
             weekday: "long",
             year: "numeric",

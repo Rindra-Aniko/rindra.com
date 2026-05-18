@@ -77,7 +77,7 @@ export default async function AdminDashboard() {
                         </span>
                       )}
                     </td>
-                    <td>{date}</td>
+                    <td suppressHydrationWarning>{date}</td>
                     <td>
                       <Link
                         href={`/admin/artikel/edit/${article.id}`}
