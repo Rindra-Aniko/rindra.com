@@ -161,9 +161,9 @@
 /* --- Alasan Punya Web Section --- */
 .alasanSection {
   padding: 0 var(--space-6) var(--space-10);
+  width: 90%;
   max-width: var(--max-width-content);
-  margin: 0 5%;
-  margin-top: -40px;
+  margin: -40px auto 0;
   position: relative;
   z-index: 2;
 }
@@ -254,8 +254,9 @@
 /* --- Lebih Dari Section --- */
 .lebihDariSection {
   padding: var(--space-10) var(--space-6);
+  width: 90%;
   max-width: var(--max-width-content);
-  margin: 0 5%;
+  margin: 0 auto;
   border-radius: 40px;
 }
 
@@ -346,12 +347,12 @@
 
 /* --- Cara Kerja Section --- */
 .caraKerjaSection {
+  width: 90%;
   max-width: var(--max-width-content);
   margin: var(--space-10) auto;
   padding: var(--space-12) var(--space-10);
   background: #1A2942;
   border-radius: 40px;
-  margin: 0 5%;
 }
 
 .caraKerjaTitle {
@@ -448,13 +449,13 @@
 
 /* --- Layanan Section --- */
 .layananSection {
+  width: 90%;
   max-width: var(--max-width-content);
   margin: var(--space-10) auto;
   padding: var(--space-12) var(--space-10);
   background: var(--color-bg-tertiary);
   border-radius: 40px;
   overflow: hidden;
-  margin: 5% 5%;
 }
 
 .layananTitle {
@@ -698,8 +699,9 @@
 /* --- Latest Articles Section --- */
 .latestSection {
   padding: var(--space-20) var(--space-6);
+  width: 90%;
   max-width: var(--max-width-content);
-  margin: 0 5%;
+  margin: 0 auto;
 }
 
 .sectionHeader {
