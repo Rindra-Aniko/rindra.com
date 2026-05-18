@@ -386,3 +386,10 @@
     height: 400px;
   }
 }
+
+@media (max-width: 768px) {
+  .daasPrice {
+    font-size: 1.7rem;
+    color: var(--color-text-highlight); /* Change price color to match the theme */
+  }
+}
