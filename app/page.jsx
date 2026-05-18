@@ -5,6 +5,7 @@ import { articles } from "@/db/schema";
 import { desc } from "drizzle-orm";
 import styles from "./page.module.css";
 import rindraImg from "../asset/rindra.svg";
+import contohImg from "../asset/contoh.svg";
 import TestimoniCarousel from "@/components/TestimoniCarousel";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -243,16 +244,26 @@ export default async function HomePage() {
             </ul>
           </div>
           <div className={styles.layananRight}>
-            <div className={styles.layananPreview}>
-              <iframe
-                src="https://sktperfectdemo.com/themepack/nature21-pro/"
-                title="Contoh Website"
-                className={styles.layananIframe}
+            <a
+              href="https://sktperfectdemo.com/themepack/nature21-pro/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.layananPreview}
+            >
+              <Image
+                src={contohImg}
+                alt="Contoh Website Premium"
+                className={styles.layananImage}
               />
-            </div>
-            <Link href="/portofolio" className={styles.layananCta}>
+            </a>
+            <a
+              href="https://sktperfectdemo.com/themepack/nature21-pro/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.layananCta}
+            >
               LIHAT CONTOH WEBSITE
-            </Link>
+            </a>
           </div>
         </div>
       </AnimatedSection>
