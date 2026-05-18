@@ -157,4 +157,12 @@
   .articleTitle { font-size: var(--text-3xl); }
   .articleBody { font-size: var(--text-base); }
   .breadcrumbCurrent { max-width: 180px; }
+  .bannerImage {
+    max-height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    object-position: center;
+  }
 }

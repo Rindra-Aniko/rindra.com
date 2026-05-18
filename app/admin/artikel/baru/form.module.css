@@ -4,6 +4,8 @@
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   box-shadow: var(--shadow-sm);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .title {
@@ -128,6 +130,30 @@
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-5) var(--space-4);
+    border-radius: var(--radius-md);
+  }
+
+  .title {
+    font-size: var(--text-xl);
+    text-align: center;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+    gap: var(--space-3);
+  }
+
+  .btnCancel, .btnSubmit {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .error {
