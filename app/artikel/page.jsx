@@ -56,7 +56,7 @@ export default async function ArtikelPage() {
               </span>
               <h2 className={styles.cardTitle}>{article.title}</h2>
               <div className={styles.cardImage}>
-                <Image src={article.imageUrl} alt={article.title} width={800} height={450} />
+                <Image src={article.imageUrl} alt={article.title} width={800} height={450} sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardFooter}>

@@ -48,6 +48,7 @@ export default function AboutPage() {
                 src={heroRindra}
                 alt="Rindra Aniko"
                 className={styles.heroImage}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
             </div>
@@ -123,7 +124,7 @@ export default function AboutPage() {
                   src={ngajarImage}
                   alt="Copywriting & SEO Rindra Aniko"
                   className={styles.copyWriteImage}
-                  sizes="(max-width: 768px)"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
               </div>

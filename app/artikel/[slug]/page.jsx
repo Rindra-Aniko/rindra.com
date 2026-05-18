@@ -108,6 +108,7 @@ export default async function ArticleDetailPage({ params }) {
           className={styles.bannerImage}
           width={1200}
           height={630}
+          sizes="100vw"
           priority
         />
       )}
