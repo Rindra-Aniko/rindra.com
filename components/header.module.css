@@ -219,10 +219,17 @@
 @media (max-width: 768px) {
   .headerInner {
     padding: 0 var(--space-4);
+    justify-content: center;
+  }
+
+  .logoText {
+    font-size: var(--text-base);
   }
 
   .menuButton {
     display: block;
+    position: absolute;
+    right: var(--space-4);
   }
 
   .nav {

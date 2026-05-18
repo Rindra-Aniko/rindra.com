@@ -23,7 +23,7 @@ export const metadata = {
     type: "website",
     locale: "id_ID",
     siteName: "Rindra.com",
-    title: "Rindra.com — Portal Membaca",
+    title: "Rindra.com — rancang website profesional untuk bisnis anda",
     description:
       "Portal membaca yang menghadirkan artikel-artikel naratif mendalam tentang sejarah Indonesia.",
   },
