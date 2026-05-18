@@ -2,17 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import styles from "./about.module.css";
-import heroRindra from "@/asset/hero_rindra.webp";
-import phpImage from "@/asset/php.webp";
-import ngajarImage from "@/asset/ngajar.webp";
-import semrushLogo from "@/asset/logo/pngegg.svg";
-import yoastLogo from "@/asset/logo/yoast_logo_icon_249128.svg";
-import capcutLogo from "@/asset/logo/capcut-icon.svg";
-import canvaLogo from "@/asset/logo/canva_icon_220714.svg";
-import figmaLogo from "@/asset/logo/figma_logo_icon_170157.svg";
-import nextjsLogo from "@/asset/logo/nextjs_icon_132160.svg";
-import wpLogo from "@/asset/logo/wordpress_logo_icon_167953.svg";
-import laravelLogo from "@/asset/logo/Laravel.svg";
+import heroRindra from "@/public/asset/hero_rindra.webp";
+import phpImage from "@/public/asset/php.webp";
+import ngajarImage from "@/public/asset/ngajar.webp";
+import semrushLogo from "@/public/asset/logo/pngegg.svg";
+import yoastLogo from "@/public/asset/logo/yoast_logo_icon_249128.svg";
+import capcutLogo from "@/public/asset/logo/capcut-icon.svg";
+import canvaLogo from "@/public/asset/logo/canva_icon_220714.svg";
+import figmaLogo from "@/public/asset/logo/figma_logo_icon_170157.svg";
+import nextjsLogo from "@/public/asset/logo/nextjs_icon_132160.svg";
+import wpLogo from "@/public/asset/logo/wordpress_logo_icon_167953.svg";
+import laravelLogo from "@/public/asset/logo/Laravel.svg";
 
 export const metadata = {
   title: "Tentang Kami | Rindra.com",

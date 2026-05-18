@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./footer.module.css";
-import fbLogo from "@/asset/logo/facebook-removebg-preview.png";
-import igLogo from "@/asset/logo/instagram-removebg-preview.png";
+import fbLogo from "@/public/asset/logo/facebook-removebg-preview.png";
+import igLogo from "@/public/asset/logo/instagram-removebg-preview.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
