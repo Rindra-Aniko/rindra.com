@@ -3,8 +3,7 @@
    Portal Membaca Premium
    =================================== */
 
-/* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Google Fonts import migrated to next/font/google in root layout */
 
 /* --- Design Tokens (CSS Custom Properties) --- */
 :root {
@@ -40,8 +39,8 @@
   --gradient-border: linear-gradient(135deg, rgba(46, 125, 50, 0.15), rgba(46, 125, 50, 0.03));
 
   /* Typography */
-  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-serif: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
