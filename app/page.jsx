@@ -320,7 +320,7 @@ export default async function HomePage() {
 
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardMeta}>
-                <span className={styles.cardDate}>
+                <span className={styles.cardDate} suppressHydrationWarning>
                   {new Date(article.createdAt).toLocaleDateString("id-ID", {
                     year: "numeric",
                     month: "long",

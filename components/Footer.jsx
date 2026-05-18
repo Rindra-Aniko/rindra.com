@@ -49,7 +49,7 @@ export default function Footer() {
         </nav>
 
         <div className={styles.footerBottom}>
-          <p className={styles.copyright}>
+          <p className={styles.copyright} suppressHydrationWarning>
             © {currentYear} rindra.com — Dibuat dengan{" "}
             <span className={styles.copyrightHeart}>♥</span> untuk pertumbuhan bisnis Anda
           </p>

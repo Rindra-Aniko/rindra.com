@@ -60,7 +60,7 @@ export default async function ArtikelPage() {
               </div>
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardFooter}>
-                <span className={styles.cardDate}>
+                <span className={styles.cardDate} suppressHydrationWarning>
                   {new Date(article.createdAt).toLocaleDateString("id-ID", {
                     year: "numeric",
                     month: "long",
