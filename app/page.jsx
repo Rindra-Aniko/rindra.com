@@ -5,7 +5,7 @@ import { articles } from "@/db/schema";
 import { desc } from "drizzle-orm";
 import styles from "./page.module.css";
 import rindraImg from "../asset/rindra.svg";
-import contohImg from "../asset/contoh.webp";
+import contohImg from "../asset/contoh.svg";
 import TestimoniCarousel from "@/components/TestimoniCarousel";
 import AnimatedSection from "@/components/AnimatedSection";
 
