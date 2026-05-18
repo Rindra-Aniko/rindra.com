@@ -280,7 +280,7 @@ export default async function HomePage() {
           Punya Visi Besar untuk Bisnis Anda? Mari Kita Wujudkan Bersama di Dunia Digital
         </h2>
         <a
-          href="https://wa.me/6281234567890"
+          href="https://wa.me/6285163731467"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.ctaWhatsapp}

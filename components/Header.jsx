@@ -25,8 +25,8 @@ export default function Header() {
         </Link>
 
         {/* Mobile Menu Button */}
-        <button 
-          className={`${styles.menuButton} ${isMenuOpen ? styles.menuOpen : ""}`} 
+        <button
+          className={`${styles.menuButton} ${isMenuOpen ? styles.menuOpen : ""}`}
           onClick={toggleMenu}
           aria-label="Toggle Navigation"
         >
@@ -56,7 +56,7 @@ export default function Header() {
         </nav>
 
         <div className={styles.headerRight}>
-          <button className={styles.btnWhatsapp}>Konsultasi Gratis</button>
+          <button className={styles.btnWhatsapp} onClick={() => window.open('https://wa.me/6285163731467', '_blank')}>Konsultasi Gratis</button>
         </div>
       </div>
     </header>
