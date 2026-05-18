@@ -12,8 +12,17 @@ import * as schema from "./schema.js";
  *   TURSO_DATABASE_URL=libsql://your-db.turso.io
  *   TURSO_AUTH_TOKEN=your-token
  */
+const isProduction = process.env.NODE_ENV === "production";
+const dbUrl = process.env.TURSO_DATABASE_URL;
+
+if (isProduction && !dbUrl) {
+  throw new Error(
+    "❌ TURSO_DATABASE_URL belum diatur di Vercel. Silakan tambahkan Environment Variables di dashboard Vercel."
+  );
+}
+
 const client = createClient({
-  url: process.env.TURSO_DATABASE_URL || "file:./data/local.db",
+  url: dbUrl || "file:./data/local.db",
   authToken: process.env.TURSO_AUTH_TOKEN || undefined,
 });
 
