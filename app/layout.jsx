@@ -12,20 +12,29 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: "Rindra.com — Portal Membaca",
+    default: "Rindra.com — Jasa Pembuatan Website Profesional",
     template: "%s | Rindra.com",
   },
   description:
-    "Portal membaca yang menghadirkan artikel-artikel naratif mendalam tentang sejarah, budaya, dan peristiwa penting Indonesia.",
-  keywords: ["portal membaca", "artikel sejarah", "sejarah indonesia", "rindra"],
+    "Tingkatkan kehadiran digital bisnis Anda bersama kami. Melayani jasa pembuatan landing page, company profile, e-commerce, hingga e-course yang responsif, modern, dan SEO-friendly.",
+  keywords: [
+    "jasa pembuatan website",
+    "web developer indonesia",
+    "bikin landing page",
+    "jasa website company profile",
+    "jasa toko online e-commerce",
+    "pembuatan website e-course",
+    "rancang website bisnis",
+    "rindra aniko"
+  ],
   authors: [{ name: "Rindra Aniko" }],
   openGraph: {
     type: "website",
     locale: "id_ID",
     siteName: "Rindra.com",
-    title: "Rindra.com — rancang website profesional untuk bisnis anda",
+    title: "Rindra.com — Rancang Website Profesional untuk Bisnis Anda",
     description:
-      "Portal membaca yang menghadirkan artikel-artikel naratif mendalam tentang sejarah Indonesia.",
+      "Tingkatkan kehadiran digital bisnis Anda bersama kami. Melayani jasa pembuatan landing page, company profile, e-commerce, hingga e-course yang responsif dan modern.",
   },
 };
 
