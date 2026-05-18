@@ -1,0 +1,388 @@
+/* ===================================
+   PAKET (PRICING) PAGE STYLES
+   =================================== */
+
+.paketSection {
+  position: relative;
+  width: 100%;
+  background: var(--color-bg-secondary); /* A very light grey/off-white background */
+  padding: var(--space-24) 0 var(--space-16);
+  min-height: 100vh;
+}
+
+.paketContainer {
+  max-width: var(--max-width-content);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+/* --- Hero Section --- */
+.paketHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-20);
+  position: relative;
+}
+
+.paketTitle {
+  font-family: var(--font-sans);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-6);
+  letter-spacing: var(--tracking-tight);
+}
+
+.highlight {
+  color: #166534; /* Dark green matching the image */
+}
+
+.paketSubtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* --- Background Blob Effect --- */
+.paketSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 600px;
+  background: #E8F5E9; /* Very light mint green */
+  border-radius: 0 0 500px 0;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.paketContainer {
+  position: relative;
+  z-index: 1; /* Above the blob */
+}
+
+/* --- Pricing Grid --- */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-24);
+  align-items: stretch;
+}
+
+.pricingCard {
+  background: var(--color-bg-primary);
+  border-radius: 16px;
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform var(--transition-slow) ease, box-shadow var(--transition-slow) ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cardHighlighted {
+  background: #475569; /* Slate blue/grey */
+  color: #ffffff;
+  border: none;
+  transform: scale(1.03); /* Slightly larger */
+  box-shadow: 0 20px 40px rgba(71, 85, 105, 0.25);
+  z-index: 2;
+}
+
+.cardHighlighted:hover {
+  transform: scale(1.03) translateY(-8px);
+  box-shadow: 0 30px 50px rgba(71, 85, 105, 0.35);
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #E0FE21; /* Bright yellow */
+  color: #333333;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 0 16px 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Card Header content */
+.cardTitle {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  color: inherit;
+}
+
+.cardDesc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+  min-height: 40px; /* Aligns pricing vertically */
+}
+
+.cardHighlighted .cardDesc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.priceLabel {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.cardHighlighted .priceLabel {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cardPrice {
+  font-family: var(--font-sans);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: inherit;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+}
+
+/* Card Features */
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-8) 0;
+  flex: 1; /* Pushes the button to the bottom */
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  color: inherit;
+}
+
+.checkIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.btnOutline {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 20px;
+  background: transparent;
+  color: #166534;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 2px solid #166534;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btnOutline:hover {
+  background: #166534;
+  color: #ffffff;
+}
+
+.btnSolid {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 20px;
+  background: #E0FE21;
+  color: #333333;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(224, 254, 33, 0.2);
+}
+
+.btnSolid:hover {
+  background: #d4f014;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(224, 254, 33, 0.3);
+}
+
+/* --- Design-as-a-Service (DaaS) Banner --- */
+.daasBanner {
+  background: #0A6635; /* Solid Green */
+  border-radius: 24px;
+  padding: var(--space-12) var(--space-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background decoration on the banner */
+.daasBanner::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.daasLeft {
+  flex: 1;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.daasTitle {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
+}
+
+.daasDesc {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-8);
+  max-width: 550px;
+}
+
+.daasFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.daasFeatureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.daasCheckIcon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.daasRight {
+  flex: 0 0 350px;
+  position: relative;
+  z-index: 1;
+}
+
+.daasPricingCard {
+  background: #A9D5B8; /* Light greenish/mint */
+  border-radius: 16px;
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.daasPriceLabel {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+.daasPrice {
+  font-family: var(--font-sans);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #333333;
+  margin-bottom: var(--space-2);
+  line-height: 1;
+}
+
+.daasPriceSub {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: var(--space-6);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 1200px) {
+  .pricingGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardHighlighted {
+    transform: none; /* Disable scaling on smaller screens */
+  }
+  .cardHighlighted:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 900px) {
+  .daasBanner {
+    flex-direction: column;
+    padding: var(--space-10) var(--space-8);
+  }
+  .daasRight {
+    width: 100%;
+    flex: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .paketHeader {
+    margin-bottom: var(--space-12);
+  }
+  .pricingGrid {
+    grid-template-columns: 1fr; /* 1 Column */
+  }
+  .paketSection::before {
+    width: 100%;
+    height: 400px;
+  }
+}
