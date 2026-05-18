@@ -46,6 +46,7 @@ export default async function HomePage() {
               alt="Rindra Aniko"
               className={styles.heroImage}
               priority
+              fetchPriority="high"
             />
           </div>
         </div>
