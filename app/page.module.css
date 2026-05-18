@@ -519,13 +519,16 @@
   background: #FFFFFF;
 }
 
-.layananIframe {
-  width: 200%;
-  height: 200%;
-  border: none;
-  transform: scale(0.5);
-  transform-origin: top left;
-  pointer-events: none;
+.layananImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+  display: block;
+}
+
+.layananPreview:hover .layananImage {
+  transform: scale(1.05);
 }
 
 .layananCta {
