@@ -4,7 +4,7 @@ import { db } from "@/db/db";
 import { articles } from "@/db/schema";
 import { desc } from "drizzle-orm";
 import styles from "./page.module.css";
-import rindraImg from "./asset/rindra.svg";
+import rindraImg from "../asset/rindra.svg";
 import TestimoniCarousel from "@/components/TestimoniCarousel";
 import AnimatedSection from "@/components/AnimatedSection";
 

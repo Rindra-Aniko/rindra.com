@@ -115,6 +115,7 @@
 
 .navLinkActive {
   color: var(--color-accent);
+  font-weight: 800; /* Added bold font-weight for active nav links */
 }
 
 .navLinkActive::after {

@@ -1,13 +1,19 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./header.module.css";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+
+  const getLinkClass = (path) => {
+    return pathname === path ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink;
+  };
 
   return (
     <header className={styles.header}>
@@ -32,19 +38,19 @@ export default function Header() {
         </button>
 
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`} id="main-nav">
-          <Link href="/" className={styles.navLink} onClick={closeMenu}>
+          <Link href="/" className={getLinkClass("/")} onClick={closeMenu}>
             Home
           </Link>
-          <Link href="/about" className={styles.navLink} onClick={closeMenu}>
+          <Link href="/about" className={getLinkClass("/about")} onClick={closeMenu}>
             Tentang Saya
           </Link>
-          <Link href="/portofolio" className={styles.navLink} onClick={closeMenu}>
+          <Link href="/portofolio" className={getLinkClass("/portofolio")} onClick={closeMenu}>
             Portofolio
           </Link>
-          <Link href="/paket" className={styles.navLink} onClick={closeMenu}>
+          <Link href="/paket" className={getLinkClass("/paket")} onClick={closeMenu}>
             Paket/Layanan
           </Link>
-          <Link href="/artikel" className={styles.navLink} onClick={closeMenu}>
+          <Link href="/artikel" className={getLinkClass("/artikel")} onClick={closeMenu}>
             Artikel
           </Link>
         </nav>

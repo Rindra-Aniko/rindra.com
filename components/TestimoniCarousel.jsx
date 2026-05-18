@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import styles from "./TestimoniCarousel.module.css";
 
 const testimonials = [
   {
     initials: "JL",
+    imageUrl: "",
     quote:
       '" Saya sangat puas dengan hasil website yang dikerjakan oleh Rindra Aniko. Proses konsultasinya sangat terarah, desain yang dihasilkan modern, bersih, dan benar-benar sesuai dengan identitas brand Saya. "',
     name: "Jenny Loren",
@@ -13,6 +15,7 @@ const testimonials = [
   },
   {
     initials: "BH",
+    imageUrl: "",
     quote:
       '" Dari awal pengajuan hingga website live, pengerjaan oleh Rindra Aniko sangat tepat waktu dan komunikasinya selalu transparan. Saya sebagai pemilik bisnis awam IT sangat terbantu dengan penjelasannya "',
     name: "Budi Harsono",
@@ -20,6 +23,7 @@ const testimonials = [
   },
   {
     initials: "DP",
+    imageUrl: "",
     quote:
       '" ini mengubah cara operasional bisnis kami. Fitur pemesanan online, integrasi pembayaran, dan sistem reservasi yang dikustomisasi berjalan sangat mulus tanpa bug. Dalam 3 bulan pertama setelah peluncuran, konversi penjualan online kami naik hampir 40% "',
     name: "Dian Permata",
@@ -27,6 +31,7 @@ const testimonials = [
   },
   {
     initials: "AS",
+    imageUrl: "",
     quote:
       '" Website toko online kami sekarang jauh lebih cepat dan mudah dikelola. Rindra Aniko sangat detail dalam memahami kebutuhan bisnis kami, dan hasilnya benar-benar melampaui ekspektasi. Pelanggan kami juga memberikan feedback positif soal tampilannya. "',
     name: "Andi Saputra",
@@ -34,6 +39,7 @@ const testimonials = [
   },
   {
     initials: "RM",
+    imageUrl: "",
     quote:
       '" Saya sudah mencoba beberapa jasa pembuatan website sebelumnya, tapi hasilnya selalu tidak memuaskan. Rindra Aniko berbeda — beliau benar-benar mendengarkan dan memberikan solusi yang tepat. SEO website kami langsung naik ke halaman pertama Google dalam 2 bulan. "',
     name: "Rina Maharani",
@@ -116,7 +122,13 @@ export default function TestimoniCarousel() {
                 <div className={styles.cardInner}>
                   <p className={styles.quote}>{t.quote}</p>
                   <div className={styles.footer}>
-                    <div className={styles.avatar}>{t.initials}</div>
+                    <div className={styles.avatar}>
+                      {t.imageUrl ? (
+                        <Image src={t.imageUrl} alt={t.name} width={50} height={50} className={styles.avatarImg} />
+                      ) : (
+                        t.initials
+                      )}
+                    </div>
                     <div>
                       <div className={styles.stars}>★★★★★</div>
                       <p className={styles.name}>{t.name}</p>
