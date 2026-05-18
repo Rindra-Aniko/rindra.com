@@ -56,7 +56,7 @@ export default function Header() {
         </nav>
 
         <div className={styles.headerRight}>
-          <button className={styles.btnWhatsapp} onClick={() => window.open('https://wa.me/6281563731467', '_blank')}>Konsultasi Gratis</button>
+          <button className={styles.btnWhatsapp} onClick={() => window.open('https://wa.me/6285163731467', '_blank')}>Konsultasi Gratis</button>
         </div>
       </div>
     </header>

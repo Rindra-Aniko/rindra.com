@@ -60,7 +60,7 @@ export default function PaketPage() {
                 <li className={styles.featureItem}><GreenCheck /> Basic Copywriting (Call-to-Action)</li>
                 <li className={styles.featureItem}><GreenCheck /> Optimasi Kecepatan Standar</li>
               </ul>
-              <Link href="https://wa.me/6281563731467" target="_blank" className={styles.btnOutline}>
+              <Link href="https://wa.me/6285163731467?text=Halo%20Kak%20Rindra%2C%20Saya%20tertarik%20dengan%20paket%20pembuatan%20website%20landingpage%20dasar." target="_blank" className={styles.btnOutline}>
                 Pilih Paket Dasar
               </Link>
             </div>
@@ -78,7 +78,7 @@ export default function PaketPage() {
                 <li className={styles.featureItem}><YellowCheck /> Full Copywriting Persuasif</li>
                 <li className={styles.featureItem}><YellowCheck /> Integrasi Analytics & Meta Pixel</li>
               </ul>
-              <Link href="https://wa.me/6281563731467" target="_blank" className={styles.btnSolid}>
+              <Link href="https://wa.me/6285163731467?text=Halo%20Kak%20Rindra%2C%20Saya%20tertarik%20dengan%20paket%20pembuatan%20website%20company%20profile." target="_blank" className={styles.btnSolid}>
                 Pilih Paket Profile
               </Link>
             </div>
@@ -95,7 +95,7 @@ export default function PaketPage() {
                 <li className={styles.featureItem}><GreenCheck /> Sistem Manajemen Inventaris</li>
                 <li className={styles.featureItem}><GreenCheck /> Sistem Perhitungan Ongkir</li>
               </ul>
-              <Link href="https://wa.me/6281563731467" target="_blank" className={styles.btnOutline}>
+              <Link href="https://wa.me/6285163731467?text=Halo%20Kak%20Rindra%2C%20Saya%20tertarik%20dengan%20paket%20pembuatan%20website%20E-commerce." target="_blank" className={styles.btnOutline}>
                 Pilih E-commerce
               </Link>
             </div>
@@ -112,7 +112,7 @@ export default function PaketPage() {
                 <li className={styles.featureItem}><GreenCheck /> Arsitektur Skala Besar</li>
                 <li className={styles.featureItem}><GreenCheck /> Maintenance Prioritas</li>
               </ul>
-              <Link href="https://wa.me/6281563731467" target="_blank" className={styles.btnOutline}>
+              <Link href="https://wa.me/6285163731467?text=Halo%20Kak%20Rindra%2C%20Saya%20tertarik%20dengan%20paket%20pembuatan%20website%20custom%20solution." target="_blank" className={styles.btnOutline}>
                 Hubungi untuk Custom
               </Link>
             </div>
@@ -140,7 +140,7 @@ export default function PaketPage() {
                 <div className={styles.daasPriceLabel}>Mulai Berlangganan</div>
                 <div className={styles.daasPrice}>IDR 2.5M</div>
                 <div className={styles.daasPriceSub}>per bulan (min. 12 bulan)</div>
-                <Link href="https://wa.me/6281563731467" target="_blank" className={styles.btnSolid}>
+                <Link href="https://wa.me/6285163731467?text=Halo%20Kak%20Rindra%2C%20Saya%20tertarik%20dengan%20paket%20pembuatan%20website%20design%20as%20a%20service." target="_blank" className={styles.btnSolid}>
                   Pelajari Lebih Lanjut
                 </Link>
               </div>
