@@ -10,33 +10,36 @@
   /* Color Palette — Light Rynthra Theme */
   --color-bg-primary: #FFFFFF;
   --color-bg-secondary: #F8FAF9;
-  --color-bg-tertiary: #EBF7EE;
-  --color-bg-card: #EBF7EE;
-  --color-bg-card-hover: #E0F0E4;
-  --color-bg-glass: rgba(255, 255, 255, 0.85);
+  --color-bg-tertiary: #ECFDF5;
+  --color-bg-card: #FFFFFF;
+  --color-bg-card-hover: #F0FDF4;
+  --color-bg-glass: rgba(255, 255, 255, 0.8);
 
-
-  --color-text-primary: #1A2E1A;
-  --color-text-secondary: #4A5A4A;
-  --color-text-muted: #7A8A7A;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748B;
   --color-text-inverse: #FFFFFF;
-  --color-text-highlight: #A04010;
-  --color-text-yellow: #e3fd36;
+  --color-text-highlight: #F59E0B;
+  --color-text-yellow: #D9F99D;
 
-  --color-accent: #2E7D32;
-  --color-accent-hover: #1B5E20;
-  --color-accent-subtle: rgba(46, 125, 50, 0.08);
-  --color-accent-glow: rgba(46, 125, 50, 0.15);
+  --color-accent: #10B981;
+  --color-accent-hover: #059669;
+  --color-accent-subtle: rgba(16, 185, 129, 0.08);
+  --color-accent-glow: rgba(16, 185, 129, 0.15);
 
-  --color-border: rgba(26, 46, 26, 0.10);
-  --color-border-hover: rgba(26, 46, 26, 0.20);
-  --color-divider: rgba(26, 46, 26, 0.06);
+  --color-secondary: #F59E0B;
+  --color-secondary-hover: #D97706;
+
+  --color-border: rgba(15, 23, 42, 0.08);
+  --color-border-hover: rgba(15, 23, 42, 0.15);
+  --color-divider: rgba(15, 23, 42, 0.05);
 
   /* Gradient Tokens */
-  --gradient-hero: linear-gradient(135deg, #EBF7EE 0%, #FFFFFF 50%, #F0F8F2 100%);
-  --gradient-accent: linear-gradient(135deg, #2E7D32 0%, #388E3C 100%);
-  --gradient-card: linear-gradient(180deg, rgba(46, 125, 50, 0.03) 0%, transparent 100%);
-  --gradient-border: linear-gradient(135deg, rgba(46, 125, 50, 0.15), rgba(46, 125, 50, 0.03));
+  --gradient-hero: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 50%, #ECFDF5 100%);
+  --gradient-accent: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  --gradient-secondary: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  --gradient-card: linear-gradient(180deg, rgba(16, 185, 129, 0.03) 0%, transparent 100%);
+  --gradient-border: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.05));
 
   /* Typography */
   --font-sans: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -82,21 +85,21 @@
   /* Layout */
   --max-width-content: 1200px;
   --max-width-article: 720px;
-  --nav-height: 72px;
+  --nav-height: 80px;
 
   /* Borders & Radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.10);
-  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 0 30px rgba(46, 125, 50, 0.10);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.2);
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);

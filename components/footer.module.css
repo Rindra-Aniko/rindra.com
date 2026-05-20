@@ -2,12 +2,12 @@
 .footer {
   margin-top: auto;
   border-top: none;
-  background: #1E2B4F;
+  background: var(--color-text-primary);
 }
 
 .footerGradient {
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, #2E7D32 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, var(--color-accent) 50%, transparent 100%);
   opacity: 0.5;
 }
 
@@ -43,10 +43,10 @@
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: var(--text-2xl);
-  color: #FFFFFF;
+  color: var(--color-text-inverse);
 }
 
-.footerLogoDot { color: #2E7D32; }
+.footerLogoDot { color: var(--color-accent); }
 
 .footerTagline {
   font-family: var(--font-sans);
@@ -68,7 +68,7 @@
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: var(--text-lg);
-  color: #FFFFFF;
+  color: var(--color-text-inverse);
   margin-bottom: var(--space-2);
 }
 
@@ -80,7 +80,7 @@
 }
 
 .contactText strong {
-  color: #FFFFFF;
+  color: var(--color-text-inverse);
   font-weight: 600;
 }
 
@@ -132,7 +132,7 @@
   transition: color var(--transition-fast);
 }
 
-.footerLink:hover { color: #FFFFFF; }
+.footerLink:hover { color: var(--color-text-inverse); }
 
 .footerBottom {
   width: 100%;
@@ -148,7 +148,7 @@
   text-align: center;
 }
 
-.copyrightHeart { color: #EBF7EE; }
+.copyrightHeart { color: var(--color-bg-tertiary); }
 
 @media (max-width: 768px) {
   .footerInner { padding: var(--space-10) var(--space-4); gap: var(--space-8); }

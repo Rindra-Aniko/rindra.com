@@ -1,17 +1,29 @@
 /* ===================================
-   PORTFOLIO PAGE STYLES
+   PORTFOLIO PAGE TYLES
    rindra.com — Premium Portfolio Layout
    =================================== */
 
 .heroSection {
   position: relative;
-  background: transparent;
-  padding: var(--space-16) 0 var(--space-8) 0;
+  background: linear-gradient(135deg, var(--color-text-primary) 0%, #0F2027 100%);
+  padding: var(--space-20) 0 var(--space-16) 0;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.1) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .heroContainer {
@@ -33,10 +45,10 @@
 
 .heroTitle {
   font-family: var(--font-sans);
-  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
   font-weight: 800;
   line-height: 1.15;
-  color: var(--color-text-primary);
+  color: var(--color-text-inverse);
   margin-bottom: var(--space-4);
   letter-spacing: var(--tracking-tight);
 }
@@ -47,21 +59,15 @@
 
 .heroSubtitle {
   font-family: var(--font-sans);
-  font-size: clamp(1.2rem, 3vw, 1.75rem);
-  font-weight: 600;
-  line-height: var(--leading-snug);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
-  letter-spacing: var(--tracking-tight);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 500;
+  line-height: var(--leading-relaxed);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-4);
 }
 
 .heroDesc {
-  font-family: var(--font-sans);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  font-weight: 500;
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-primary);
-  margin-bottom: 0;
+  display: none; /* Subtitle handles it well enough now for a cleaner look */
 }
 
 /* ===================================
@@ -72,12 +78,13 @@
   max-width: var(--max-width-content);
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--space-8) var(--space-24) var(--space-8);
+  padding: var(--space-12) var(--space-6) var(--space-24) var(--space-6);
 }
 
 /* Category Sections */
 .categorySection {
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-20);
+  margin-top: var(--space-20);
 }
 
 .categorySection:last-child {
@@ -86,20 +93,31 @@
 
 .categoryTitle {
   font-family: var(--font-sans);
-  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-size: 2rem;
   font-weight: 800;
   color: var(--color-text-highlight);
-  margin-bottom: var(--space-6);
-  margin-top: var(--space-12);
+  margin-bottom: var(--space-8);
   letter-spacing: var(--tracking-tight);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.categoryTitle::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent) 0%, transparent 100%);
+  border-radius: var(--radius-full);
+  opacity: 0.3;
 }
 
 /* Grid & Cards */
 .portfolioGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
+  gap: var(--space-8);
   width: 100%;
 }
 
@@ -107,97 +125,205 @@
   display: flex;
   flex-direction: column;
   background: var(--color-bg-primary);
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
-  transition: all var(--transition-slow) var(--transition-spring);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3); /* Adds a frame around the image */
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
+  position: relative;
 }
 
 .portfolioCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-  border-color: rgba(46, 125, 50, 0.15);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); /* Eye-catching Emerald glow */
+  border-color: rgba(16, 185, 129, 0.3);
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.5 / 1;
+  aspect-ratio: 16 / 11;
   overflow: hidden;
-  background: #f3f4f6;
+  border-radius: var(--radius-lg); /* Inner radius for framed look */
+  background: var(--color-bg-secondary);
 }
 
 .cardImage {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;
-  transition: transform var(--transition-slow) var(--transition-spring);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .portfolioCard:hover .cardImage {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* Hover Overlay */
 .cardOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(46, 125, 50, 0.85);
-  /* Accent-colored translucent overlay */
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   opacity: 0;
-  transition: opacity var(--transition-fast) ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .portfolioCard:hover .cardOverlay {
   opacity: 1;
 }
 
+.overlayContent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-accent);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolioCard:hover .overlayContent {
+  transform: translateY(0);
+}
+
 .overlayText {
-  color: white;
-  font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: var(--tracking-tight);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
 }
 
 .arrowIcon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 /* Card Information */
 .cardInfo {
-  padding: var(--space-6);
+  padding: var(--space-5) var(--space-4) var(--space-3);
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  background: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .cardCategory {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-accent);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 
 .cardTitle {
   font-family: var(--font-sans);
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--color-text-primary);
-  line-height: 1.35;
+  line-height: 1.3;
   transition: color var(--transition-fast) ease;
 }
 
 .portfolioCard:hover .cardTitle {
   color: var(--color-accent);
+}
+
+/* ===================================
+   CTA SECTION
+   =================================== */
+
+.ctaSection {
+  max-width: var(--max-width-content);
+  margin: var(--space-10) auto var(--space-20);
+  padding: var(--space-16) var(--space-10);
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ctaContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaTitle {
+  font-family: var(--font-sans);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-6);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: var(--tracking-tight);
+}
+
+.ctaDesc {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--space-10);
+}
+
+.ctaWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-10);
+  background: var(--color-accent);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.ctaWhatsapp:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+  background: var(--color-accent-hover);
+}
+
+.ctaIcon {
+  width: 28px;
+  height: 28px;
+  color: #FFFFFF;
+  flex-shrink: 0;
 }
 
 /* ===================================
@@ -211,16 +337,17 @@
 
   .portfolioGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
   }
 }
 
 @media (max-width: 768px) {
   .heroSection {
-    padding: var(--space-10) 0 var(--space-6) 0;
+    padding: var(--space-12) 0 var(--space-10) 0;
   }
 
   .heroTitle {
-    font-size: clamp(2rem, 4.5vw, 2.75rem);
+    font-size: clamp(2rem, 6vw, 2.75rem);
   }
 
   .portfolioGrid {
@@ -228,11 +355,16 @@
     gap: var(--space-6);
   }
 
-  .portfolioCard {
-    border-radius: 20px;
+  .categoryTitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-6);
   }
-
+  
   .categorySection {
     margin-bottom: var(--space-12);
+  }
+
+  .portfolioCard {
+    border-radius: var(--radius-lg);
   }
 }

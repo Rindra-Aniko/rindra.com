@@ -59,7 +59,7 @@ export default async function HomePage() {
             <h2 className={styles.alasanTitle}>
               KENAPA<br />
               HARUS<br />
-              <span style={{ color: "#ffffffff" }}>PUNYA<br />
+              <span style={{ color: "var(--color-text-highlight)" }}>PUNYA<br />
                 WEBSITE ?</span>
 
             </h2>
@@ -228,42 +228,73 @@ export default async function HomePage() {
 
       {/* Layanan Section */}
       <AnimatedSection className={styles.layananSection} id="layanan" delay={0.2}>
-        <h2 className={styles.layananTitle}>
-          Apa Jasa yang Saya sediakan ?
-        </h2>
-        <div className={styles.layananContainer}>
-          <div className={styles.layananLeft}>
-            <div className={styles.layananAccent} />
-            <ul className={styles.layananList}>
-              <li>Landingpage</li>
-              <li>Profil Pribadi/Perusahaan</li>
-              <li>Copywriting (Ide Penulisan Promosi)</li>
-              <li>Optimasi SEO (Agar Lebih mudah di baca mesin pencari)</li>
-              <li>Toko Online/e-commerse</li>
-              <li>Blog</li>
-              <li>Rancang Sendiri Idenya</li>
-            </ul>
+        <div className={styles.layananHeader}>
+          <h2 className={styles.layananTitle}>
+            Layanan <span style={{ color: "var(--color-accent)" }}>Terbaik</span> Untuk Anda
+          </h2>
+          <p className={styles.layananSubtitle}>
+            Solusi digital komprehensif yang dirancang untuk meningkatkan kehadiran online bisnis Anda.
+          </p>
+        </div>
+
+        <div className={styles.layananGrid}>
+          <div className={styles.layananCard}>
+            <div className={styles.layananIconWrapper}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <h3 className={styles.layananCardTitle}>Landing Page</h3>
+            <p className={styles.layananCardDesc}>Halaman konversi tinggi yang fokus untuk mengubah pengunjung menjadi pembeli.</p>
           </div>
-          <div className={styles.layananRight}>
-            <a
-              href="/portofolio"
-              rel="noopener noreferrer"
-              className={styles.layananPreview}
-            >
-              <Image
-                src={contohImg}
-                alt="Contoh Website Premium"
-                className={styles.layananImage}
-              />
-            </a>
-            <a
+
+          <div className={styles.layananCard}>
+            <div className={styles.layananIconWrapper}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 className={styles.layananCardTitle}>Company Profile</h3>
+            <p className={styles.layananCardDesc}>Website resmi yang membangun kredibilitas dan profesionalisme perusahaan Anda.</p>
+          </div>
+
+          <div className={styles.layananCard}>
+            <div className={styles.layananIconWrapper}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 className={styles.layananCardTitle}>Copywriting</h3>
+            <p className={styles.layananCardDesc}>Pembuatan teks persuasif yang memikat audiens dan meningkatkan penjualan.</p>
+          </div>
+
+          <div className={styles.layananCard}>
+            <div className={styles.layananIconWrapper}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><polyline points="11 8 11 11 14 14"></polyline></svg>
+            </div>
+            <h3 className={styles.layananCardTitle}>Optimasi SEO</h3>
+            <p className={styles.layananCardDesc}>Tingkatkan peringkat website Anda di Google agar mudah ditemukan calon pelanggan.</p>
+          </div>
+
+          <div className={styles.layananCard}>
+            <div className={styles.layananIconWrapper}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </div>
+            <h3 className={styles.layananCardTitle}>Toko Online</h3>
+            <p className={styles.layananCardDesc}>Platform e-commerce lengkap dengan sistem keranjang belanja dan pembayaran.</p>
+          </div>
+
+          <div className={styles.layananCard}>
+            <div className={styles.layananIconWrapper}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </div>
+            <h3 className={styles.layananCardTitle}>Blog & Artikel</h3>
+            <p className={styles.layananCardDesc}>Sistem manajemen konten untuk berbagi cerita, berita, dan wawasan bisnis.</p>
+          </div>
+        </div>
+        
+        <div className={styles.layananFooter}>
+           <a
               href="/portofolio"
               rel="noopener noreferrer"
               className={styles.layananCta}
             >
-              LIHAT CONTOH WEBSITE
+              LIHAT PORTOFOLIO KAMI
             </a>
-          </div>
         </div>
       </AnimatedSection>
 
