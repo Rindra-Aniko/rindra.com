@@ -876,7 +876,7 @@
   }
 
   .heroImage {
-    max-width: 380px;
+    max-width: auto;
     width: 100%;
   }
 
@@ -932,7 +932,7 @@
 
   .alasanContainer {
     flex-direction: column;
-    padding: var(--space-8) var(--space-6);
+    padding: var(--space-8) 3px;
     border-radius: 24px;
     gap: var(--space-8);
   }
@@ -1102,8 +1102,8 @@
   }
 
   .heroImage {
-    width: 70%;
-    max-width: 260px;
+    width: 100%;
+    max-width: auto;
   }
 
   .btnPrimary,
@@ -1113,6 +1113,10 @@
     width: 100%;
   }
 
+  .alasanSection {
+    padding: 10px 0;
+    margin-top: -80px;
+  }
   .alasanTitle {
     font-size: 3rem;
   }

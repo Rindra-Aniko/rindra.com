@@ -246,8 +246,7 @@ export default async function HomePage() {
           </div>
           <div className={styles.layananRight}>
             <a
-              href="https://sktperfectdemo.com/themepack/nature21-pro/"
-              target="_blank"
+              href="/portofolio"
               rel="noopener noreferrer"
               className={styles.layananPreview}
             >
@@ -258,8 +257,7 @@ export default async function HomePage() {
               />
             </a>
             <a
-              href="https://sktperfectdemo.com/themepack/nature21-pro/"
-              target="_blank"
+              href="/portofolio"
               rel="noopener noreferrer"
               className={styles.layananCta}
             >
