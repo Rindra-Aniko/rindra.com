@@ -108,7 +108,7 @@ const portfolioData = [
 
 export default function PortfolioContainer() {
   return (
-    <div className={styles.portfolioContainer}>
+    <div className={styles.portfolioContainer} >
       {categoryOrder.map((cat, idx) => {
         const items = portfolioData.filter(
           (item) => item.category === cat.key
@@ -122,7 +122,7 @@ export default function PortfolioContainer() {
             delay={0.15 * (idx + 1)}
           >
             <section className={styles.categorySection}>
-              <h2 className={styles.categoryTitle}>{cat.label}</h2>
+              <h2 className={styles.categoryTitle} >{cat.label}</h2>
               <div className={styles.portfolioGrid}>
                 {items.map((item) => (
                   <Link
