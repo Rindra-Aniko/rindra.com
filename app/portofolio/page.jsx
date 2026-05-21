@@ -15,7 +15,7 @@ export default function PortofolioPage() {
   return (
     <div className={styles.pageWrapper}>
       {/* Hero / Header Section */}
-      <AnimatedSection className={styles.heroSection} id="portfolio-hero" delay={0.1}>
+      <section className={styles.heroSection} id="portfolio-hero">
         <div className={styles.heroContainer}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
@@ -29,7 +29,7 @@ export default function PortofolioPage() {
             </p>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
       {/* Portfolio Filter & Grid Container */}
       <PortfolioContainer />
