@@ -9,6 +9,9 @@ import contohImg from "@/public/asset/contoh.svg";
 import TestimoniCarousel from "@/components/TestimoniCarousel";
 import AnimatedSection from "@/components/AnimatedSection";
 
+// Cache halaman selama 1 jam (3600 detik) untuk mengoptimalkan database query
+export const revalidate = 3600;
+
 export default async function HomePage() {
   const latestArticles = await db
     .select()

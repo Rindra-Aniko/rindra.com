@@ -16,6 +16,8 @@ export const metadata = {
   },
 };
 
+export const revalidate = 3600;
+
 export default async function ArtikelPage() {
   const allArticles = await db
     .select()
