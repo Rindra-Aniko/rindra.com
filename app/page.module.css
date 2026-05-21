@@ -35,6 +35,8 @@
   padding-left: 50px;
   padding-right: 50px;
   max-height: 90vh;
+  /* Kunci tinggi container agar elemen di dalamnya tidak bergeser (Fix CLS Desktop) */
+  min-height: 80vh;
 }
 
 .heroText {
@@ -724,10 +726,11 @@
 }
 
 .cardImage {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius-lg);
+  position: relative;
   overflow: hidden;
+  border-radius: var(--radius-md);
+  /* Mencegah gambar artikel collapse ke 0px sebelum dimuat (Fix CLS Desktop) */
+  aspect-ratio: 16 / 9;
 }
 
 .cardImage img {
