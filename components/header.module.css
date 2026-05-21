@@ -43,19 +43,22 @@
   opacity: 0.85;
 }
 
-.logoIcon {
-  width: 36px;
-  height: 36px;
-  background: var(--gradient-accent);
+.logoIconImage {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
   border-radius: var(--radius-sm);
+  transition: transform var(--transition-base);
+}
+
+.logo:hover .logoIconImage {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.logoTextWrapper {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: var(--text-lg);
-  color: var(--color-text-inverse);
-  letter-spacing: -0.05em;
 }
 
 .logoText {
@@ -63,7 +66,22 @@
   font-weight: 700;
   font-size: var(--text-lg);
   color: var(--color-text-primary);
+  line-height: 1.15;
   letter-spacing: var(--tracking-tight);
+}
+
+.logoSubtitle {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 1px;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .logoDot {
@@ -219,11 +237,15 @@
 @media (max-width: 768px) {
   .headerInner {
     padding: 0 var(--space-4);
-    justify-content: center;
+    justify-content: left;
   }
 
   .logoText {
     font-size: var(--text-base);
+  }
+
+  .logoSubtitle {
+    font-size: 0.55rem;
   }
 
   .menuButton {
