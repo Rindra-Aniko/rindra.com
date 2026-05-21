@@ -4,7 +4,7 @@ import { db } from "@/db/db";
 import { articles } from "@/db/schema";
 import { desc } from "drizzle-orm";
 import styles from "./page.module.css";
-import rindraImg from "@/public/asset/rindra.svg";
+import rindraImg from "@/public/asset/hero_rindra.webp";
 import contohImg from "@/public/asset/contoh.svg";
 import dynamic from "next/dynamic"; // KUNCI UTAMA: Memanggil Dynamic Import
 
@@ -53,7 +53,6 @@ export default async function HomePage() {
               className={styles.heroImage}
               priority
               fetchPriority="high"
-              unoptimized /* KUNCI UTAMA: Hentikan pemrosesan SVG yang bikin berat */
             />
           </div>
         </div>
