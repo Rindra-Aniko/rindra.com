@@ -13,8 +13,8 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: "Rindra.com — Jasa Pembuatan Website Profesional",
-    template: "%s | Rindra.com",
+    default: "rindra aniko — Jasa Pembuatan Website Profesional dan digital creator",
+    template: "%s | rindra aniko",
   },
   description:
     "Tingkatkan kehadiran digital bisnis Anda bersama kami. Melayani jasa pembuatan landing page, company profile, e-commerce, hingga e-course yang responsif, modern, dan SEO-friendly.",
@@ -33,7 +33,7 @@ export const metadata = {
     type: "website",
     locale: "id_ID",
     siteName: "Rindra.com",
-    title: "Rindra.com — Rancang Website Profesional untuk Bisnis Anda",
+    title: "Rindra aniko — Rancang Website Profesional untuk Bisnis Anda",
     description:
       "Tingkatkan kehadiran digital bisnis Anda bersama kami. Melayani jasa pembuatan landing page, company profile, e-commerce, hingga e-course yang responsif dan modern.",
   },
