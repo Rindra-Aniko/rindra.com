@@ -7,9 +7,9 @@ import bcrypt from "bcryptjs";
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { jwtKey } from "@/lib/auth-config";
 
-const JWT_SECRET = process.env.JWT_SECRET || "supersecretrynthrasecretkey12345";
-const key = new TextEncoder().encode(JWT_SECRET);
+const key = jwtKey;
 
 /**
  * Melakukan login admin

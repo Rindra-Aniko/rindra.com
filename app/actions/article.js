@@ -7,9 +7,9 @@ import { cookies } from "next/headers";
 import { jwtVerify } from "jose";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { jwtKey } from "@/lib/auth-config";
 
-const JWT_SECRET = process.env.JWT_SECRET || "supersecretrynthrasecretkey12345";
-const key = new TextEncoder().encode(JWT_SECRET);
+const key = jwtKey;
 
 /**
  * Helper untuk membuat slug ramah URL dari judul
