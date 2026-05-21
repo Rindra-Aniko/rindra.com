@@ -142,7 +142,7 @@ export default function TestimoniCarousel() {
                   <div className={styles.footer}>
                     <div className={styles.avatar}>
                       {t.imageUrl ? (
-                        <Image src={t.imageUrl} alt={t.name} width={56} height={56} className={styles.avatarImg} />
+                        <Image src={t.imageUrl} alt={t.name} width={56} height={56} className={styles.avatarImg} priority />
                       ) : (
                         t.initials
                       )}
