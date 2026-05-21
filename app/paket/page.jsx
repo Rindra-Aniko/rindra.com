@@ -3,7 +3,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import styles from "./paket.module.css";
 
 export const metadata = {
-  title: "Paket & Layanan | Rindra.com",
+  title: "Paket & Layanan | Rindra Aniko",
   description: "Pilih paket pembuatan website profesional yang dirancang untuk mengonversi pengunjung menjadi pelanggan.",
 };
 

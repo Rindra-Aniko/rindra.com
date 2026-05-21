@@ -18,12 +18,12 @@ async function seedAdmin() {
       process.exit(0);
     }
 
-    const hashedPassword = await bcrypt.hash("admin12345", 10);
+    const hashedPassword = await bcrypt.hash("Exsit301286!@", 10);
     await db.insert(admins).values({
       username: "admin",
       password: hashedPassword,
     });
-    console.log("Admin default (admin / admin12345) berhasil ditambahkan!");
+    console.log("Admin default (admin / Exsit301286!@) berhasil ditambahkan!");
     process.exit(0);
   } catch (error) {
     console.error("Gagal menambahkan admin:", error);

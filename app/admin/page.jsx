@@ -3,6 +3,7 @@ import { db } from "@/db/db";
 import { articles } from "@/db/schema";
 import { desc } from "drizzle-orm";
 import styles from "./dashboard.module.css";
+import DeleteButton from "./DeleteButton";
 
 export const dynamic = "force-dynamic";
 
@@ -89,6 +90,8 @@ export default async function AdminDashboard() {
                       >
                         Edit
                       </Link>
+                      <span style={{ margin: "0 8px", color: "var(--color-border)" }}>|</span>
+                      <DeleteButton id={article.id} />
                     </td>
                   </tr>
                 );

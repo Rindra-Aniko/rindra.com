@@ -25,13 +25,13 @@ export async function generateMetadata({ params }) {
 
   return {
     title: article.title,
-    description: article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di rindra.com`,
+    description: article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di ryndigitalpro.com`,
     openGraph: {
       title: article.title,
-      description: article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di rindra.com`,
+      description: article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di ryndigitalpro.com`,
       type: "article",
       publishedTime: article.createdAt,
-      siteName: "Rindra.com",
+      siteName: "Rindra Aniko",
     },
   };
 }

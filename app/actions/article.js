@@ -8,6 +8,7 @@ import { jwtVerify } from "jose";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { jwtKey } from "@/lib/auth-config";
+import { verifyCsrf } from "@/lib/csrf";
 
 const key = jwtKey;
 
@@ -30,6 +31,12 @@ function slugify(text) {
  * Action untuk menambahkan artikel baru
  */
 export async function createArticleAction(prevState, formData) {
+  // CSRF Protection
+  const isCsrfValid = await verifyCsrf();
+  if (!isCsrfValid) {
+    return { error: "Permintaan ditolak karena indikasi CSRF (Origin mismatch)" };
+  }
+
   const title = formData.get("title")?.trim();
   const content = formData.get("content")?.trim();
   const imageUrl = formData.get("imageUrl")?.trim();
@@ -93,6 +100,12 @@ export async function createArticleAction(prevState, formData) {
  * Action untuk mengedit artikel yang sudah ada
  */
 export async function editArticleAction(prevState, formData) {
+  // CSRF Protection
+  const isCsrfValid = await verifyCsrf();
+  if (!isCsrfValid) {
+    return { error: "Permintaan ditolak karena indikasi CSRF (Origin mismatch)" };
+  }
+
   const id = formData.get("id");
   const title = formData.get("title")?.trim();
   const content = formData.get("content")?.trim();
@@ -141,4 +154,45 @@ export async function editArticleAction(prevState, formData) {
 
   // Redirect ke admin dashboard
   redirect("/admin");
+}
+
+/**
+ * Action untuk menghapus artikel
+ */
+export async function deleteArticleAction(id) {
+  // CSRF Protection
+  const isCsrfValid = await verifyCsrf();
+  if (!isCsrfValid) {
+    return { error: "Permintaan ditolak karena indikasi CSRF (Origin mismatch)" };
+  }
+
+  if (!id) {
+    return { error: "ID artikel tidak valid" };
+  }
+
+  try {
+    // Pastikan admin terautentikasi
+    const cookieStore = await cookies();
+    const token = cookieStore.get("admin_session")?.value;
+
+    if (!token) {
+      return { error: "Sesi tidak valid, silakan login kembali" };
+    }
+
+    // Verifikasi token JWT
+    await jwtVerify(token, key);
+
+    // Hapus artikel dari db
+    await db.delete(articles).where(eq(articles.id, Number(id)));
+
+    // Revalidasi cache
+    revalidatePath("/");
+    revalidatePath("/artikel");
+    revalidatePath("/admin");
+
+    return { success: true };
+  } catch (error) {
+    console.error("Gagal menghapus artikel:", error);
+    return { error: "Terjadi kesalahan server saat menghapus artikel" };
+  }
 }

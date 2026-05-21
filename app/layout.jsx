@@ -13,8 +13,8 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: "rindra aniko — Jasa Pembuatan Website Profesional dan digital creator",
-    template: "%s | rindra aniko",
+    default: "Rindra Aniko — Jasa Pembuatan Website Profesional dan digital creator",
+    template: "%s | Rindra Aniko",
   },
   description:
     "Tingkatkan kehadiran digital bisnis Anda bersama kami. Melayani jasa pembuatan landing page, company profile, e-commerce, hingga e-course yang responsif, modern, dan SEO-friendly.",
@@ -26,14 +26,14 @@ export const metadata = {
     "jasa toko online e-commerce",
     "pembuatan website e-course",
     "rancang website bisnis",
-    "rindra aniko"
+    "Rindra Aniko"
   ],
   authors: [{ name: "Rindra Aniko" }],
   openGraph: {
     type: "website",
     locale: "id_ID",
-    siteName: "Rindra.com",
-    title: "Rindra aniko — Rancang Website Profesional untuk Bisnis Anda",
+    siteName: "Rindra Aniko",
+    title: "Rindra Aniko — Rancang Website Profesional untuk Bisnis Anda",
     description:
       "Tingkatkan kehadiran digital bisnis Anda bersama kami. Melayani jasa pembuatan landing page, company profile, e-commerce, hingga e-course yang responsif dan modern.",
   },
