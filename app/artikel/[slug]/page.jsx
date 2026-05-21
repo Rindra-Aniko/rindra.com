@@ -6,6 +6,8 @@ import { articles } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import styles from "./single-article.module.css";
 
+export const revalidate = 3600;
+
 /**
  * Generate dynamic SEO metadata from database
  */
