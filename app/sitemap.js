@@ -9,7 +9,6 @@ export default async function sitemap() {
   const allArticles = await db
     .select({ 
       slug: articles.slug, 
-      updatedAt: articles.updatedAt, 
       createdAt: articles.createdAt 
     })
     .from(articles)
@@ -18,7 +17,7 @@ export default async function sitemap() {
   // Pemetaan URL dinamis untuk setiap artikel
   const articleUrls = allArticles.map((article) => ({
     url: `${baseUrl}/artikel/${article.slug}`,
-    lastModified: article.updatedAt || article.createdAt || new Date(),
+    lastModified: article.createdAt || new Date(),
     changeFrequency: "weekly",
     priority: 0.8,
   }));
