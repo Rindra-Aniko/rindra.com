@@ -14,7 +14,7 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
             <span className={styles.footerLogo}>
-              rindra<span className={styles.footerLogoDot}>.</span>com
+              ryndigitalpro<span className={styles.footerLogoDot}>.</span>com
             </span>
             <p className={styles.footerTagline}>
               Jasa Pembuatan Website Profesional & Solusi Digital Bisnis Anda
@@ -27,7 +27,7 @@ export default function Footer() {
               <strong>Alamat:</strong> Jl. Wisata Desa Hamparan Pugu Kecamatan Air Hangat Barat Kabupaten Kerinci, kodepos 37161
             </p>
             <p className={styles.contactText}>
-              <strong>Email:</strong> suport@rindra.com
+              <strong>Email:</strong> suport@ryndigitalpro.com
             </p>
             <div className={styles.socialIcons}>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div className={styles.footerBottom}>
           <p className={styles.copyright} suppressHydrationWarning>
-            © {currentYear} rindra.com — Dibuat dengan{" "}
+            © {currentYear} ryndigitalpro.com — Dibuat dengan{" "}
             <span className={styles.copyrightHeart}>♥</span> untuk pertumbuhan bisnis Anda
           </p>
         </div>
