@@ -346,7 +346,7 @@ export default async function HomePage() {
               <h3 className={styles.cardTitle}>{article.title}</h3>
               {article.imageUrl && (
                 <div className={styles.cardImage}>
-                  <Image src={article.imageUrl} alt={article.title} width={800} height={450} sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={article.imageUrl} alt={article.title} width={800} height={450} sizes="(max-width: 1024px) 50vw, 33vw" />
                 </div>
               )}
 

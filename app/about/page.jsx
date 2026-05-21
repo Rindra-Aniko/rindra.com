@@ -48,7 +48,7 @@ export default function AboutPage() {
                 src={heroRindra}
                 alt="Rindra Aniko"
                 className={styles.heroImage}
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 300px, 420px"
                 priority
               />
             </div>
@@ -68,19 +68,16 @@ export default function AboutPage() {
                   src={nextjsLogo}
                   alt="Next.js"
                   className={styles.techIcon}
-                  priority
                 />
                 <Image
                   src={wpLogo}
                   alt="WordPress"
                   className={styles.techIcon}
-                  priority
                 />
                 <Image
                   src={laravelLogo}
                   alt="Laravel"
                   className={styles.techIcon}
-                  priority
                 />
               </div>
 
@@ -99,8 +96,7 @@ export default function AboutPage() {
                   src={phpImage}
                   alt="Web Development Rindra Aniko"
                   className={styles.devwebImage}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
+                  sizes="(max-width: 480px) 100vw, 480px"
                 />
               </div>
             </div>
@@ -124,8 +120,7 @@ export default function AboutPage() {
                   src={ngajarImage}
                   alt="Copywriting & SEO Rindra Aniko"
                   className={styles.copyWriteImage}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
+                  sizes="(max-width: 480px) 100vw, 480px"
                 />
               </div>
             </div>
@@ -137,13 +132,11 @@ export default function AboutPage() {
                   src={semrushLogo}
                   alt="SEMrush Logo"
                   className={styles.semrushLogo}
-                  priority
                 />
                 <Image
                   src={yoastLogo}
                   alt="Yoast SEO Logo"
                   className={styles.yoastLogo}
-                  priority
                 />
               </div>
 
@@ -167,19 +160,16 @@ export default function AboutPage() {
               src={capcutLogo}
               alt="CapCut Logo"
               className={styles.softSkillIcon}
-              priority
             />
             <Image
               src={canvaLogo}
               alt="Canva Logo"
               className={styles.softSkillIcon}
-              priority
             />
             <Image
               src={figmaLogo}
               alt="Figma Logo"
               className={styles.softSkillIcon}
-              priority
             />
           </div>
 

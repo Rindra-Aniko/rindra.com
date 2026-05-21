@@ -9,6 +9,7 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
   display: "swap",
+  fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
 });
 
 export const metadata = {
@@ -29,6 +30,13 @@ export const metadata = {
     "Rindra Aniko"
   ],
   authors: [{ name: "Rindra Aniko" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "id_ID",
@@ -42,7 +50,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id" className={poppins.variable} suppressHydrationWarning>
-      <body>
+      <body className={poppins.className}>
         <Header />
         <main>{children}</main>
         <Footer />

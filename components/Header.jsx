@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "./header.module.css";
 
@@ -19,9 +20,21 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.headerInner}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
-          <span className={styles.logoText}>
-            Rindra<span className={styles.logoDot}> </span>Aniko
-          </span>
+          <Image
+            src="/favicon-32x32.png"
+            alt="Logo Rindra Aniko"
+            width={32}
+            height={32}
+            className={styles.logoIconImage}
+          />
+          <div className={styles.logoTextWrapper}>
+            <span className={styles.logoText}>
+              Rindra<span className={styles.logoDot}> </span>Aniko
+            </span>
+            <span className={styles.logoSubtitle}>
+              Web Developer & Digital Creator
+            </span>
+          </div>
         </Link>
 
         {/* Mobile Menu Button */}
