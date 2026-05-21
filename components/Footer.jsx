@@ -31,10 +31,10 @@ export default function Footer() {
             </p>
             <div className={styles.socialIcons}>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                <Image src={fbLogo} alt="Facebook" width={32} height={32} className={styles.socialImg} priority />
+                <Image src={fbLogo} alt="Facebook" width={32} height={32} className={styles.socialImg} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                <Image src={igLogo} alt="Instagram" width={32} height={32} className={styles.socialImg} priority />
+                <Image src={igLogo} alt="Instagram" width={32} height={32} className={styles.socialImg} />
               </a>
             </div>
           </div>
