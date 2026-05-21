@@ -20,7 +20,7 @@ export default function Header() {
       <div className={styles.headerInner}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           <span className={styles.logoText}>
-            ryndigitalpro<span className={styles.logoDot}>.</span>com
+            Rindra<span className={styles.logoDot}> </span>Aniko
           </span>
         </Link>
 

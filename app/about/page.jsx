@@ -15,11 +15,11 @@ import wpLogo from "@/public/asset/logo/wordpress_logo_icon_167953.svg";
 import laravelLogo from "@/public/asset/logo/Laravel.svg";
 
 export const metadata = {
-  title: "Tentang Kami | Rindra.com",
+  title: "Tentang Kami | Rindra Aniko",
   description:
     "Rindra Aniko — Web Developer & Kreator Digital berbasis di Kerinci-Jambi.",
   openGraph: {
-    title: "Tentang Kami | Rindra.com",
+    title: "Tentang Kami | Rindra Aniko",
     description:
       "Rindra Aniko — Web Developer & Kreator Digital berbasis di Kerinci-Jambi.",
   },

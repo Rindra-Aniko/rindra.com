@@ -8,9 +8,9 @@ import styles from "./articles.module.css";
 export const metadata = {
   title: "Semua Artikel",
   description:
-    "Jelajahi seluruh koleksi artikel naratif mendalam tentang sejarah dan peristiwa penting Indonesia di portal membaca rindra.com.",
+    "Jelajahi seluruh koleksi artikel naratif mendalam tentang sejarah dan peristiwa penting Indonesia di portal web Rindra Aniko.",
   openGraph: {
-    title: "Semua Artikel | Rindra.com",
+    title: "Semua Artikel | Rindra Aniko",
     description:
       "Koleksi artikel naratif mendalam tentang sejarah Indonesia.",
   },
@@ -55,9 +55,11 @@ export default async function ArtikelPage() {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h2 className={styles.cardTitle}>{article.title}</h2>
-              <div className={styles.cardImage}>
-                <Image src={article.imageUrl} alt={article.title} width={800} height={450} sizes="(max-width: 768px) 100vw, 50vw" />
-              </div>
+              {article.imageUrl && (
+                <div className={styles.cardImage}>
+                  <Image src={article.imageUrl} alt={article.title} width={800} height={450} sizes="(max-width: 768px) 100vw, 50vw" />
+                </div>
+              )}
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardFooter}>
                 <span className={styles.cardDate} suppressHydrationWarning>

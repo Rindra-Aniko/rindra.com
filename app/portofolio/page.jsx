@@ -3,10 +3,10 @@ import PortfolioContainer from "@/components/PortfolioContainer";
 import styles from "./portofolio.module.css";
 
 export const metadata = {
-  title: "Portofolio | Rindra.com",
+  title: "Portofolio | Rindra Aniko",
   description: "Lihat portofolio karya terbaik kami, dari Landingpage, Website Company Profile, E-commerce, hingga solusi digital kustom lainnya.",
   openGraph: {
-    title: "Portofolio | Rindra.com",
+    title: "Portofolio | Rindra Aniko",
     description: "Lihat portofolio karya terbaik kami, dari Landingpage, Website Company Profile, E-commerce, hingga solusi digital kustom lainnya.",
   },
 };

@@ -8,6 +8,7 @@ import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { jwtKey } from "@/lib/auth-config";
+import { verifyCsrf } from "@/lib/csrf";
 
 const key = jwtKey;
 
@@ -15,6 +16,12 @@ const key = jwtKey;
  * Melakukan login admin
  */
 export async function loginAction(prevState, formData) {
+  // CSRF Protection
+  const isCsrfValid = await verifyCsrf();
+  if (!isCsrfValid) {
+    return { error: "Permintaan ditolak karena indikasi CSRF (Origin mismatch)" };
+  }
+
   const username = formData.get("username")?.trim();
   const password = formData.get("password");
 
@@ -69,6 +76,12 @@ export async function loginAction(prevState, formData) {
  * Logout admin
  */
 export async function logoutAction() {
+  // CSRF Protection
+  const isCsrfValid = await verifyCsrf();
+  if (!isCsrfValid) {
+    redirect("/admin");
+  }
+
   const cookieStore = await cookies();
   cookieStore.delete("admin_session");
   redirect("/admin/login");
@@ -78,6 +91,12 @@ export async function logoutAction() {
  * Mengubah password admin
  */
 export async function changePasswordAction(prevState, formData) {
+  // CSRF Protection
+  const isCsrfValid = await verifyCsrf();
+  if (!isCsrfValid) {
+    return { error: "Permintaan ditolak karena indikasi CSRF (Origin mismatch)" };
+  }
+
   const oldPassword = formData.get("oldPassword");
   const newPassword = formData.get("newPassword");
   const confirmPassword = formData.get("confirmPassword");

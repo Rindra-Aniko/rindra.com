@@ -344,9 +344,11 @@ export default async function HomePage() {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className={styles.cardTitle}>{article.title}</h3>
-              <div className={styles.cardImage}>
-                <Image src={article.imageUrl} alt={article.title} width={800} height={450} sizes="(max-width: 768px) 100vw, 33vw" />
-              </div>
+              {article.imageUrl && (
+                <div className={styles.cardImage}>
+                  <Image src={article.imageUrl} alt={article.title} width={800} height={450} sizes="(max-width: 768px) 100vw, 33vw" />
+                </div>
+              )}
 
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <div className={styles.cardMeta}>

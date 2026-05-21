@@ -14,7 +14,7 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
             <span className={styles.footerLogo}>
-              ryndigitalpro<span className={styles.footerLogoDot}>.</span>com
+              Rindra<span className={styles.footerLogoDot}> </span>Aniko
             </span>
             <p className={styles.footerTagline}>
               Jasa Pembuatan Website Profesional & Solusi Digital Bisnis Anda
@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div className={styles.footerBottom}>
           <p className={styles.copyright} suppressHydrationWarning>
-            © {currentYear} ryndigitalpro.com — Dibuat dengan{" "}
+            © {currentYear} Rindra Aniko — Dibuat dengan{" "}
             <span className={styles.copyrightHeart}>♥</span> untuk pertumbuhan bisnis Anda
           </p>
         </div>
