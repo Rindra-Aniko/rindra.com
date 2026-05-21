@@ -4,8 +4,7 @@ import { db } from "@/db/db";
 import { articles } from "@/db/schema";
 import { desc } from "drizzle-orm";
 import styles from "./page.module.css";
-import rindraImg from "@/public/asset/hero_rindra.webp";
-import contohImg from "@/public/asset/contoh.svg";
+import rindraImg from "@/public/asset/rindra.webp";
 import dynamic from "next/dynamic"; // KUNCI UTAMA: Memanggil Dynamic Import
 
 // 1. LAZY LOAD KOMPONEN BERAT (Menyelamatkan CPU HP)
