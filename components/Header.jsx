@@ -26,6 +26,7 @@ export default function Header() {
             width={32}
             height={32}
             className={styles.logoIconImage}
+            priority
           />
           <div className={styles.logoTextWrapper}>
             <span className={styles.logoText}>
