@@ -10,9 +10,7 @@ import dynamic from "next/dynamic"; // KUNCI UTAMA: Memanggil Dynamic Import
 
 // 1. LAZY LOAD KOMPONEN BERAT (Menyelamatkan CPU HP)
 const AnimatedSection = dynamic(() => import("@/components/AnimatedSection"));
-const TestimoniCarousel = dynamic(() => import("@/components/TestimoniCarousel"), { 
-  ssr: false // Meringankan beban server di awal render
-});
+const TestimoniCarousel = dynamic(() => import("@/components/TestimoniCarousel"));
 
 // 2. CACHE DATABASE (Menyelamatkan waktu loading server)
 export const revalidate = 3600; 
