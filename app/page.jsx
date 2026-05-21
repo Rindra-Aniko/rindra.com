@@ -44,14 +44,15 @@ export default async function HomePage() {
             </div>
           </div>
           <div className={styles.heroImageContainer}>
-            <Image
-              src={rindraImg}
-              alt="Rindra Aniko"
-              className={styles.heroImage}
-              priority
-              fetchPriority="high"
-            />
-          </div>
+           <Image
+            src={rindraImg} // Biarkan variabel ini sesuai dengan kode asli Mas
+            alt="Rindra Aniko"
+            className={styles.heroImage}
+            priority
+            fetchPriority="high"
+            unoptimized /* <--- KETIK MANUAL 1 KATA INI SAJA */
+          />
+                    </div>
         </div>
       </section>
 
