@@ -34,7 +34,7 @@ export default function PaketPage() {
       <div className={styles.paketContainer}>
 
         {/* Header Section */}
-        <AnimatedSection id="paket-header" delay={0.1}>
+        <section id="paket-header">
           <div className={styles.paketHeader}>
             <h1 className={styles.paketTitle}>
               Investasi Digital yang <span className={styles.highlight}>Menguntungkan</span> untuk Bisnis Anda
@@ -43,7 +43,7 @@ export default function PaketPage() {
               Pilih paket pembuatan website profesional yang dirancang bukan hanya untuk tampil menarik, tapi untuk mengonversi pengunjung menjadi pelanggan dan memberikan ROI nyata.
             </p>
           </div>
-        </AnimatedSection>
+        </section>
 
         {/* Pricing Grid */}
         <AnimatedSection id="pricing-grid" delay={0.2}>

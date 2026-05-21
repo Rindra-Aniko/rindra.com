@@ -29,7 +29,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <AnimatedSection className={styles.heroSection} id="about-hero" delay={0.1}>
+      <section className={styles.heroSection} id="about-hero">
         <div className={styles.heroContainer}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
@@ -54,7 +54,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
       {/* Web Development Section */}
       <AnimatedSection className={styles.devwebSection} id="about-devweb" delay={0.2}>
