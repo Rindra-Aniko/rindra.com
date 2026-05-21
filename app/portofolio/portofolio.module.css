@@ -1,28 +1,132 @@
 /* ===================================
-   PORTFOLIO PAGE TYLES
-   rindra.com — Premium Portfolio Layout
+   PORTFOLIO PAGE STYLES
+   rindra.com — White Luxury Showcase + Glass Frame v5
+   =================================== */
+
+/* ---- ANIMATIONS ---- */
+
+@keyframes luxuryShimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glassShine {
+  0%   { left: -120%; }
+  100% { left: 120%; }
+}
+
+@keyframes softFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(15px, -20px) scale(1.03); }
+}
+
+@keyframes softFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(-20px, 15px) scale(1.05); }
+}
+
+/* ==================================
+   PAGE WRAPPER — WHITE LUXURY
+   ================================== */
+
+.pageWrapper {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  /* Clean white base with very subtle warm-cool gradient */
+  background:
+    linear-gradient(
+      160deg,
+      #ffffff 0%,
+      #fafbff 20%,
+      #f8f9fe 40%,
+      #fefefe 60%,
+      #faf8ff 80%,
+      #ffffff 100%
+    );
+}
+
+/* Luxury soft orb — top right: subtle rose-gold warmth */
+.pageWrapper::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle at center,
+    rgba(251, 191, 146, 0.08) 0%,
+    rgba(196, 181, 253, 0.05) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+  animation: softFloat 20s ease-in-out infinite;
+}
+
+/* Luxury soft orb — bottom left: subtle lavender coolness */
+.pageWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle at center,
+    rgba(165, 180, 252, 0.07) 0%,
+    rgba(186, 230, 253, 0.04) 40%,
+    transparent 65%
+  );
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+  animation: softFloat2 25s ease-in-out infinite;
+}
+
+/* ===================================
+   HERO SECTION — ELEGANT DARK HEADER
    =================================== */
 
 .heroSection {
   position: relative;
-  background: linear-gradient(135deg, var(--color-text-primary) 0%, #0F2027 100%);
-  padding: var(--space-20) 0 var(--space-16) 0;
-  overflow: hidden;
+  padding: var(--space-24) 0 var(--space-16) 0;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  border-bottom: 1px solid var(--color-border);
+  z-index: 5;
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
 }
 
+/* Subtle golden accent glow in hero */
 .heroSection::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.1) 0%, transparent 60%);
+  top: -30%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.heroSection::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -40,51 +144,60 @@
 }
 
 .heroText {
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .heroTitle {
   font-family: var(--font-sans);
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
   font-weight: 800;
-  line-height: 1.15;
-  color: var(--color-text-inverse);
-  margin-bottom: var(--space-4);
+  line-height: 1.12;
+  color: #f8fafc;
+  margin-bottom: var(--space-5);
   letter-spacing: var(--tracking-tight);
 }
 
 .titleHighlight {
-  color: var(--color-accent);
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .heroSubtitle {
   font-family: var(--font-sans);
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
   line-height: var(--leading-relaxed);
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: var(--space-4);
+  color: rgba(203, 213, 225, 0.8);
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 .heroDesc {
-  display: none; /* Subtitle handles it well enough now for a cleaner look */
+  display: none;
 }
 
 /* ===================================
-   PORTFOLIO INTERACTIVE CONTAINER
+   PORTFOLIO CONTAINER
    =================================== */
 
 .portfolioContainer {
   max-width: var(--max-width-content);
   width: 100%;
   margin: 0 auto;
-  padding: var(--space-12) var(--space-6) var(--space-24) var(--space-6);
+  padding: var(--space-16) var(--space-6) var(--space-20) var(--space-6);
+  position: relative;
+  z-index: 5;
 }
 
-/* Category Sections */
+/* ===================================
+   CATEGORY SECTIONS
+   =================================== */
+
 .categorySection {
   margin-bottom: var(--space-20);
-  margin-top: var(--space-20);
+  margin-top: var(--space-8);
 }
 
 .categorySection:last-child {
@@ -93,27 +206,44 @@
 
 .categoryTitle {
   font-family: var(--font-sans);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-text-highlight);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
   margin-bottom: var(--space-8);
-  letter-spacing: var(--tracking-tight);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-4);
   width: 100%;
+}
+
+.categoryTitle::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .categoryTitle::after {
   content: '';
   flex: 1;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-accent) 0%, transparent 100%);
-  border-radius: var(--radius-full);
-  opacity: 0.3;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.12) 0%,
+    rgba(15, 23, 42, 0.03) 60%,
+    transparent 100%
+  );
 }
 
-/* Grid & Cards */
+/* ===================================
+   GRID
+   =================================== */
+
 .portfolioGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -121,118 +251,224 @@
   width: 100%;
 }
 
+/* ===================================
+   CARD — LUXURY SILVER FRAME
+   =================================== */
+
 .portfolioCard {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background: var(--color-bg-primary);
-  border-radius: var(--radius-xl);
-  padding: var(--space-3); /* Adds a frame around the image */
-  border: 1px solid var(--color-border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
   text-decoration: none;
-  position: relative;
+  z-index: 10;
+
+  /* Premium silver chrome gradient frame */
+  background: linear-gradient(
+    160deg,
+    #e8e8e8 0%,
+    #f5f5f5 12%,
+    #d4d4d4 25%,
+    #fafafa 40%,
+    #c8c8c8 55%,
+    #e0e0e0 70%,
+    #f0f0f0 85%,
+    #d0d0d0 100%
+  );
+  padding: 6px;
+  border: 1px solid rgba(192, 192, 192, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.05) inset,
+    inset 0 0 12px rgba(255, 255, 255, 0.3);
+
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease;
+}
+
+/* Metallic top-light reflection — polished silver shine */
+.portfolioCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.2) 30%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 20;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Chrome sweeping shine on hover */
+.portfolioCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.1) 70%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 21;
+  transition: none;
 }
 
 .portfolioCard:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); /* Eye-catching Emerald glow */
-  border-color: rgba(16, 185, 129, 0.3);
+  transform: translateY(-10px) scale(1.015);
+  box-shadow:
+    0 20px 50px rgba(120, 120, 140, 0.18),
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 1px 0 rgba(255, 255, 255, 1) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.06) inset,
+    inset 0 0 20px rgba(255, 255, 255, 0.35);
+  border-color: rgba(180, 180, 200, 0.7);
 }
+
+.portfolioCard:hover::after {
+  left: 120%;
+  transition: left 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===================================
+   IMAGE — FULL VIEW (CONTAIN)
+   =================================== */
 
 .imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: var(--radius-lg); /* Inner radius for framed look */
-  background: var(--color-bg-secondary);
+  border-radius: 11px;
+  /* Soft neutral background behind letterboxing */
+  background: linear-gradient(145deg, #f1f5f9 0%, #e8ecf1 50%, #f1f5f9 100%);
 }
 
 .cardImage {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  object-fit: contain;
+  transition:
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.5s ease;
 }
 
 .portfolioCard:hover .cardImage {
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 
-/* Hover Overlay */
+/* ===================================
+   HOVER OVERLAY
+   =================================== */
+
 .cardOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(4px);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(15, 23, 42, 0.40) 0%,
+    rgba(15, 23, 42, 0.75) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: var(--space-2);
   opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.35s ease;
+  z-index: 3;
+  border-radius: 11px;
 }
 
 .portfolioCard:hover .cardOverlay {
   opacity: 1;
 }
 
-.overlayContent {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  background: var(--color-accent);
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--radius-full);
-  transform: translateY(20px);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.portfolioCard:hover .overlayContent {
-  transform: translateY(0);
-}
-
 .overlayText {
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: var(--tracking-wide);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  background: rgba(16, 185, 129, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(14px);
+  opacity: 0;
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease;
+}
+
+.portfolioCard:hover .overlayText {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .arrowIcon {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
+  margin-left: 2px;
 }
 
-/* Card Information */
+/* ===================================
+   CARD INFO — BRUSHED SILVER STRIP
+   =================================== */
+
 .cardInfo {
-  padding: var(--space-5) var(--space-4) var(--space-3);
+  padding: var(--space-4) var(--space-5) var(--space-3);
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
-  background: transparent;
+  gap: var(--space-1);
   position: relative;
   z-index: 2;
-}
-
-.cardCategory {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  letter-spacing: 0.1em;
+  /* Brushed silver strip background */
+  background: linear-gradient(
+    90deg,
+    rgba(220, 220, 225, 0.5) 0%,
+    rgba(240, 240, 245, 0.4) 50%,
+    rgba(220, 220, 225, 0.5) 100%
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .cardTitle {
   font-family: var(--font-sans);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--color-text-primary);
-  line-height: 1.3;
-  transition: color var(--transition-fast) ease;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s ease;
 }
 
 .portfolioCard:hover .cardTitle {
@@ -240,30 +476,35 @@
 }
 
 /* ===================================
-   CTA SECTION
+   CTA SECTION — ELEGANT DARK PANEL
    =================================== */
 
 .ctaSection {
-  max-width: var(--max-width-content);
-  margin: var(--space-10) auto var(--space-20);
+  max-width: 880px;
+  margin: var(--space-12) auto var(--space-24);
   padding: var(--space-16) var(--space-10);
   text-align: center;
-  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
+  z-index: 5;
+
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
 }
 
+/* Subtle golden glow in CTA */
 .ctaSection::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 100%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+  top: -30%;
+  right: -15%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.05) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -274,12 +515,12 @@
 
 .ctaTitle {
   font-family: var(--font-sans);
-  font-size: 2.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
   font-weight: 800;
-  color: var(--color-text-primary);
-  line-height: 1.2;
-  margin-bottom: var(--space-6);
-  max-width: 800px;
+  color: #f1f5f9;
+  line-height: 1.25;
+  margin-bottom: var(--space-5);
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
   letter-spacing: var(--tracking-tight);
@@ -287,47 +528,48 @@
 
 .ctaDesc {
   font-family: var(--font-sans);
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: var(--color-text-secondary);
-  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(203, 213, 225, 0.65);
+  max-width: 520px;
   margin: 0 auto var(--space-10);
 }
 
 .ctaWhatsapp {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-3);
   padding: var(--space-4) var(--space-10);
-  background: var(--color-accent);
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   color: #FFFFFF;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-full);
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1rem;
   text-decoration: none;
-  text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.25);
 }
 
 .ctaWhatsapp:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
-  background: var(--color-accent-hover);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 20px 45px rgba(16, 185, 129, 0.35),
+    0 0 0 5px rgba(16, 185, 129, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .ctaIcon {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   color: #FFFFFF;
   flex-shrink: 0;
 }
 
 /* ===================================
-   RESPONSIVE ADJUSTMENTS
+   RESPONSIVE
    =================================== */
 
 @media (max-width: 1024px) {
@@ -339,11 +581,16 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
   }
+
+  .ctaSection {
+    margin-left: var(--space-6);
+    margin-right: var(--space-6);
+  }
 }
 
 @media (max-width: 768px) {
   .heroSection {
-    padding: var(--space-12) 0 var(--space-10) 0;
+    padding: var(--space-16) 0 var(--space-12) 0;
   }
 
   .heroTitle {
@@ -356,15 +603,58 @@
   }
 
   .categoryTitle {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     margin-bottom: var(--space-6);
   }
-  
+
   .categorySection {
-    margin-bottom: var(--space-12);
+    margin-bottom: var(--space-16);
   }
 
   .portfolioCard {
+    border-radius: 12px;
+    padding: 5px;
+  }
+
+  .imageWrapper {
+    border-radius: 8px;
+  }
+
+  .cardOverlay {
+    border-radius: 8px;
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+
+  .ctaSection {
+    padding: var(--space-10) var(--space-6);
+    margin-left: var(--space-4);
+    margin-right: var(--space-4);
     border-radius: var(--radius-lg);
+  }
+
+  .ctaTitle {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .ctaWhatsapp {
+    padding: var(--space-3) var(--space-8);
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: var(--space-12) 0 var(--space-10) 0;
+  }
+
+  .portfolioCard {
+    padding: 4px;
+  }
+
+  .cardInfo {
+    padding: var(--space-3) var(--space-3) var(--space-2);
   }
 }

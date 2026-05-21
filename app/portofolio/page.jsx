@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function PortofolioPage() {
   return (
-    <>
+    <div className={styles.pageWrapper}>
       {/* Hero / Header Section */}
       <AnimatedSection className={styles.heroSection} id="portfolio-hero" delay={0.1}>
         <div className={styles.heroContainer}>
@@ -60,6 +60,6 @@ export default function PortofolioPage() {
           </a>
         </div>
       </AnimatedSection>
-    </>
+    </div>
   );
 }

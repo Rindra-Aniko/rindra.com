@@ -16,10 +16,10 @@ const portfolioData = [
   // Landingpage
   {
     id: 1,
-    title: "SaaS App Product Landing Page",
+    title: "Landing Page Jenis Produk",
     category: "LANDINGPAGE",
-    imageUrl: "/asset/hero_rindra.webp",
-    link: "https://example.com/saas",
+    imageUrl: "/asset/webscreenshot/perysmith.webp",
+    link: "https://contolp01.netlify.app/ ",
   },
   {
     id: 2,
