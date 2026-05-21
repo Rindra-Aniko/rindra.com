@@ -139,7 +139,7 @@ export default function PortfolioContainer() {
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className={styles.cardImage}
-                        priority
+                        priority={item.id <= 2}
                       />
                       <div className={styles.cardOverlay}>
                         <span className={styles.overlayText}>Kunjungi Situs</span>
