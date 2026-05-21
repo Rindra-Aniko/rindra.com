@@ -302,7 +302,7 @@ export default async function HomePage() {
       </AnimatedSection>
 
       {/* Testimoni Section */}
-      <AnimatedSection delay={0.2}>
+      <AnimatedSection className={styles.testimoniSection} delay={0.2}>
         <TestimoniCarousel />
       </AnimatedSection>
 

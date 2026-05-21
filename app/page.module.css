@@ -62,6 +62,8 @@
   line-height: 1.5;
   color: var(--color-text-secondary);
   margin-bottom: var(--space-8);
+  /* Mengunci ruang teks agar tombol di bawahnya tidak tertendang */
+  min-height: 60px;
 }
 
 .heroButtons {
@@ -804,6 +806,14 @@
 
 .articleCard:hover .cardArrow {
   transform: translateX(4px);
+}
+
+.testimoniSection {
+  width: 90%;
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  /* Mengunci ruang setinggi 350px agar slider tidak menendang footer saat loading */
+  min-height: 350px; 
 }
 
 /* --- Responsive --- */
