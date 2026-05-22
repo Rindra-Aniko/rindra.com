@@ -3,7 +3,7 @@
   width: 100%;
   max-width: var(--max-width-content);
   margin: var(--space-10) auto;
-  padding: var(--space-12) var(--space-6);
+  padding: var(--space-12) var(--space-4);
   border-radius: var(--radius-xl);
   background: var(--color-bg-secondary);
 }
@@ -227,8 +227,8 @@
   .title { font-size: 1.75rem; }
   .subtitle { font-size: 0.9rem; }
   .carouselWrapper { gap: var(--space-2); }
-  .navBtn { width: 36px; height: 36px; }
-  .navBtn svg { width: 18px; height: 18px; }
+  .navBtn { width: 20px; height: 20px; }
+  .navBtn svg { width: 10px; height: 10px; }
   .carouselViewport { min-height: 360px; }
   .cardInner { min-height: 360px; padding: var(--space-6) var(--space-4); }
   .quote { font-size: 0.8rem; }
