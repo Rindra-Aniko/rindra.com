@@ -1,6 +1,6 @@
 /* --- Testimoni Section --- */
 .section {
-  width: 90%;
+  width: 100%;
   max-width: var(--max-width-content);
   margin: var(--space-10) auto;
   padding: var(--space-12) var(--space-6);
@@ -125,14 +125,14 @@
 .quoteIcon {
   color: var(--color-accent);
   opacity: 0.2;
-  width: 48px;
-  height: 48px;
+  width: 25px;
+  height: 25px;
   margin-bottom: -20px;
 }
 
 .quote {
   font-family: var(--font-sans);
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-style: italic;
   line-height: 1.6;
   color: var(--color-text-primary);
@@ -220,7 +220,7 @@
   .cardsGrid { grid-template-columns: 1fr; }
   .carouselViewport { min-height: 320px; }
   .cardInner { min-height: 320px; padding: var(--space-8) var(--space-6); }
-  .quote { font-size: 1.1rem; }
+  .quote { font-size: 0.8rem; }
 }
 
 @media (max-width: 480px) {
@@ -231,7 +231,7 @@
   .navBtn svg { width: 18px; height: 18px; }
   .carouselViewport { min-height: 360px; }
   .cardInner { min-height: 360px; padding: var(--space-6) var(--space-4); }
-  .quote { font-size: 1rem; }
+  .quote { font-size: 0.8rem; }
   .avatar { width: 48px; height: 48px; font-size: 1.2rem; }
   .name { font-size: 1rem; }
   .role { font-size: 0.8rem; }

@@ -264,7 +264,7 @@
 
 /* --- Lebih Dari Section --- */
 .lebihDariSection {
-  padding: var(--space-10) var(--space-6);
+  padding: var(--space-10) var(--space-3);
   width: 90%;
   max-width: var(--max-width-content);
   margin: 0 auto;
