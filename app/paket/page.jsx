@@ -124,7 +124,7 @@ export default function PaketPage() {
         <AnimatedSection id="daas-banner" delay={0.3}>
           <div className={styles.daasBanner}>
             <div className={styles.daasLeft}>
-              <h2 className={styles.daasTitle}>Design-as-a-Service</h2>
+              <h2 className={styles.daasTitle}>Servis Berlangganan</h2>
               <p className={styles.daasDesc}>
                 Tidak ingin investasi besar di awal? Dapatkan website premium, pemeliharaan berkelanjutan, update desain rutin, dan optimasi SEO terus-menerus dengan sistem berlangganan bulanan.
               </p>

@@ -275,6 +275,7 @@
   font-weight: 800;
   margin-bottom: var(--space-4);
   letter-spacing: var(--tracking-tight);
+  color:var(--color-text-yellow);
 }
 
 .daasDesc {
@@ -389,6 +390,6 @@
 
 @media (max-width: 768px) {
   .daasPrice {
-    font-size: 1.7rem;/* Change price color to match the theme */
+    font-size: 1.6rem;/* Change price color to match the theme */
   }
 }
