@@ -21,7 +21,7 @@ export default function Header() {
       <div className={styles.headerInner}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           <Image
-            src="/favicon-32x32.png"
+            src="/favicon-3.png"
             alt="Logo Rindra Aniko"
             width={32}
             height={32}
