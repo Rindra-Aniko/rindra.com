@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import Link from "next/link";
 import { editArticleAction } from "@/app/actions/article";
+import RichTextarea from "@/components/RichTextarea";
 import styles from "../../baru/form.module.css";
 
 export default function EditForm({ article }) {
@@ -74,15 +75,14 @@ export default function EditForm({ article }) {
           <label htmlFor="content" className={styles.label}>
             Isi Konten Artikel
           </label>
-          <textarea
+          <RichTextarea
             id="content"
             name="content"
-            className={styles.textarea}
             placeholder="Tuliskan isi konten artikel secara detail disini..."
             defaultValue={article.content || ""}
             required
             disabled={isPending}
-          ></textarea>
+          />
         </div>
 
         <div className={styles.actions}>

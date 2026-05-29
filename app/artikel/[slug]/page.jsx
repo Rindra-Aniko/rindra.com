@@ -51,10 +51,21 @@ export async function generateStaticParams() {
  */
 function renderContent(content) {
   if (!content) return null;
+  
+  // Check if content contains block HTML tags
+  const hasHTMLBlocks = /<p>|<h2>|<h3>|<ul>|<ol>|<blockquote>|<hr\s*\/?>/.test(content);
+  
+  if (hasHTMLBlocks) {
+    return <div dangerouslySetInnerHTML={{ __html: content }} />;
+  }
+  
+  // Legacy plain-text fallback: split by double newlines into paragraphs, and handle single newlines as line breaks.
   return content
     .split("\n\n")
     .filter((p) => p.trim())
-    .map((paragraph, i) => <p key={i}>{paragraph.trim()}</p>);
+    .map((paragraph, i) => (
+      <p key={i} dangerouslySetInnerHTML={{ __html: paragraph.trim().replace(/\n/g, "<br />") }} />
+    ));
 }
 
 export default async function ArticleDetailPage({ params }) {

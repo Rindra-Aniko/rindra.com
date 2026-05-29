@@ -60,7 +60,8 @@ export async function createArticleAction(prevState, formData) {
 
     // Buat slug dan excerpt
     let slug = slugify(title);
-    const excerpt = metaDescription || (content.length > 150 ? content.slice(0, 150) + "..." : content);
+    const cleanContent = content.replace(/<[^>]*>/g, "");
+    const excerpt = metaDescription || (cleanContent.length > 150 ? cleanContent.slice(0, 150) + "..." : cleanContent);
 
     // Pastikan slug unik
     const existing = await db
@@ -87,6 +88,7 @@ export async function createArticleAction(prevState, formData) {
     // Revalidasi cache agar halaman terupdate instan
     revalidatePath("/");
     revalidatePath("/artikel");
+    revalidatePath("/artikel/[slug]", "page");
   } catch (error) {
     console.error("Gagal membuat artikel:", error);
     return { error: "Terjadi kesalahan server saat menyimpan artikel" };
@@ -129,7 +131,8 @@ export async function editArticleAction(prevState, formData) {
     await jwtVerify(token, key);
 
     // Generate excerpt
-    const excerpt = metaDescription || (content.length > 150 ? content.slice(0, 150) + "..." : content);
+    const cleanContent = content.replace(/<[^>]*>/g, "");
+    const excerpt = metaDescription || (cleanContent.length > 150 ? cleanContent.slice(0, 150) + "..." : cleanContent);
 
     // Update data di db
     await db

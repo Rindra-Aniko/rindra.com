@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import Link from "next/link";
 import { createArticleAction } from "@/app/actions/article";
+import RichTextarea from "@/components/RichTextarea";
 import styles from "./form.module.css";
 
 export default function NewArticlePage() {
@@ -68,14 +69,13 @@ export default function NewArticlePage() {
           <label htmlFor="content" className={styles.label}>
             Isi Konten Artikel
           </label>
-          <textarea
+          <RichTextarea
             id="content"
             name="content"
-            className={styles.textarea}
             placeholder="Tuliskan isi konten artikel secara detail disini..."
             required
             disabled={isPending}
-          ></textarea>
+          />
         </div>
 
         <div className={styles.actions}>

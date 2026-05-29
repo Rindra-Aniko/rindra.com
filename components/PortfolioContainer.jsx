@@ -15,97 +15,30 @@ const categoryOrder = [
 const portfolioData = [
   // Landingpage
   {
-    id: 1,
+    id: 'lp1',
     title: "Landing Page Jenis Produk",
     category: "LANDINGPAGE",
     imageUrl: "/asset/webscreenshot/perysmith.webp",
     link: "https://contolp01.netlify.app/ ",
   },
-  {
-    id: 2,
-    title: "Modern Gadget Launch Page",
-    category: "LANDINGPAGE",
-    imageUrl: "/asset/ngajar.webp",
-    link: "https://example.com/product",
-  },
-  {
-    id: 3,
-    title: "Tech Event & Seminar Registration",
-    category: "LANDINGPAGE",
-    imageUrl: "/asset/php.webp",
-    link: "https://example.com/event",
-  },
 
   // Website Company Profile
   {
-    id: 4,
-    title: "Corporate Tech Startup Site",
+    id: 'cp1',
+    title: "Website Personal Kesehatan",
     category: "COMPANY PROFILE",
-    imageUrl: "/asset/ngajar.webp",
-    link: "https://example.com/startup",
-  },
-  {
-    id: 5,
-    title: "Creative & Design Agency Studio",
-    category: "COMPANY PROFILE",
-    imageUrl: "/asset/php.webp",
-    link: "https://example.com/agency",
-  },
-  {
-    id: 6,
-    title: "Financial & Consulting Firm",
-    category: "COMPANY PROFILE",
-    imageUrl: "/asset/hero_rindra.webp",
-    link: "https://example.com/consulting",
-  },
+    imageUrl: "/asset/bdn_tari.webp",
+    link: "https://www.bidantari.my.id",
+  }
+ 
 
   // E-commerce
-  {
-    id: 7,
-    title: "Premium Fashion & Apparel Store",
-    category: "E-COMMERCE",
-    imageUrl: "/asset/php.webp",
-    link: "https://example.com/fashion",
-  },
-  {
-    id: 8,
-    title: "Smart Gadgets & Electronics Shop",
-    category: "E-COMMERCE",
-    imageUrl: "/asset/hero_rindra.webp",
-    link: "https://example.com/electronics",
-  },
-  {
-    id: 9,
-    title: "Fresh Organic Foods Marketplace",
-    category: "E-COMMERCE",
-    imageUrl: "/asset/ngajar.webp",
-    link: "https://example.com/organic",
-  },
+ 
 
   // Other
-  {
-    id: 10,
-    title: "Personal Lifestyle Blog & Vlog Hub",
-    category: "OTHER",
-    imageUrl: "/asset/hero_rindra.webp",
-    link: "https://example.com/blog",
-  },
-  {
-    id: 11,
-    title: "Interactive E-Learning Platform",
-    category: "OTHER",
-    imageUrl: "/asset/ngajar.webp",
-    link: "https://example.com/learning",
-  },
-  {
-    id: 12,
-    title: "Global Developer Community Forum",
-    category: "OTHER",
-    imageUrl: "/asset/php.webp",
-    link: "https://example.com/forum",
-  },
-];
+ 
 
+];
 export default function PortfolioContainer() {
   return (
     <div className={styles.portfolioContainer} >
