@@ -44,6 +44,21 @@ export const metadata = {
     title: "Rindra Aniko — Rancang Website Profesional untuk Bisnis Anda",
     description:
       "Tingkatkan kehadiran digital bisnis Anda bersama kami. Melayani jasa pembuatan landing page, company profile, e-commerce, hingga e-course yang responsif dan modern.",
+    images: [
+      {
+        url: "https://ryndigitalpro.com/asset/hero_rindra.webp",
+        width: 1200,
+        height: 630,
+        alt: "Rindra Aniko — Rancang Website Profesional untuk Bisnis Anda",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rindra Aniko — Rancang Website Profesional untuk Bisnis Anda",
+    description:
+      "Tingkatkan kehadiran digital bisnis Anda bersama kami. Melayani jasa pembuatan landing page, company profile, e-commerce, hingga e-course yang responsif dan modern.",
+    images: ["https://ryndigitalpro.com/asset/hero_rindra.webp"],
   },
 };
 

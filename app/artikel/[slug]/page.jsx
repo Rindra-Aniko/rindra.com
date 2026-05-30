@@ -25,15 +25,56 @@ export async function generateMetadata({ params }) {
     return { title: "Artikel Tidak Ditemukan" };
   }
 
+  const baseUrl = "https://ryndigitalpro.com";
+  let ogImages = [];
+
+  if (article.imageUrl) {
+    let imageUrl = article.imageUrl;
+    if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
+      // Sudah berupa URL absolut
+    } else if (imageUrl.startsWith("/")) {
+      imageUrl = `${baseUrl}${imageUrl}`;
+    } else {
+      imageUrl = `${baseUrl}/${imageUrl}`;
+    }
+    ogImages = [
+      {
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+        alt: article.title,
+      },
+    ];
+  } else {
+    // Default fallback jika artikel tidak memiliki gambar sampul
+    ogImages = [
+      {
+        url: `${baseUrl}/asset/hero_rindra.webp`,
+        width: 1200,
+        height: 630,
+        alt: article.title,
+      },
+    ];
+  }
+
+  const description = article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di ryndigitalpro.com`;
+
   return {
     title: article.title,
-    description: article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di ryndigitalpro.com`,
+    description: description,
     openGraph: {
       title: article.title,
-      description: article.metaDescription || article.excerpt || `Baca artikel "${article.title}" di ryndigitalpro.com`,
+      description: description,
       type: "article",
       publishedTime: article.createdAt,
       siteName: "Rindra Aniko",
+      images: ogImages,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: description,
+      images: ogImages.map((img) => img.url),
     },
   };
 }
