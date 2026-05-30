@@ -2,7 +2,7 @@
 .article {
   max-width: var(--max-width-article);
   margin: 0 auto;
-  padding: var(--space-12) var(--space-6) var(--space-20);
+  padding: var(--space-12) var(--space-1) var(--space-20);
   animation: fadeInUp 0.6s ease-out;
 }
 
@@ -42,12 +42,14 @@
 }
 
 .bannerImage {
-  width: 100%;
-  max-height: 480px;
+  width: 80%;
+  max-height: 350px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-8);
   box-shadow: var(--shadow-md);
+  justify-self: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .articleDate {
