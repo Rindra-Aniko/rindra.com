@@ -14,13 +14,24 @@ export default async function sitemap() {
     .from(articles)
     .orderBy(desc(articles.createdAt));
 
-  // Pemetaan URL dinamis untuk setiap artikel
-  const articleUrls = allArticles.map((article) => ({
-    url: `${baseUrl}/artikel/${article.slug}`,
-    lastModified: article.createdAt || new Date().toISOString().split('.')[0] + 'Z',
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
+  const articleUrls = allArticles.map((article) => {
+    let lastModifiedStr = new Date().toISOString().split('.')[0] + 'Z';
+    if (article.createdAt) {
+      // Mengubah format SQLite "YYYY-MM-DD HH:MM:SS" menjadi "YYYY-MM-DDTHH:MM:SSZ"
+      const formattedDate = article.createdAt.replace(" ", "T") + "Z";
+      const parsedDate = new Date(formattedDate);
+      if (!isNaN(parsedDate.getTime())) {
+        lastModifiedStr = parsedDate.toISOString().split('.')[0] + 'Z';
+      }
+    }
+
+    return {
+      url: `${baseUrl}/artikel/${article.slug}`,
+      lastModified: lastModifiedStr,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    };
+  });
 
   // Pemetaan URL statis utama
   const staticUrls = [
