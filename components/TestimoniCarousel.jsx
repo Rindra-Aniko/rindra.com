@@ -6,12 +6,12 @@ import styles from "./TestimoniCarousel.module.css";
 
 const testimonials = [
   {
-    initials: "JL",
-    imageUrl: "",
+    initials: "Bidan Tari",
+    imageUrl: "https://bidantari.my.id/image/PROFILE_2.webp",
     quote:
       '" Saya sangat puas dengan hasil website yang dikerjakan oleh Rindra Aniko. Proses konsultasinya sangat terarah, desain yang dihasilkan modern, bersih, dan benar-benar sesuai dengan identitas brand Saya. "',
-    name: "Jenny Loren",
-    role: "CEO bukukita.com",
+    name: "Bidan Tari",
+    role: "Bidan Semurup",
   },
   {
     initials: "BH",

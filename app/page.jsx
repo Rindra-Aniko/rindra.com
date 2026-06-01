@@ -99,7 +99,7 @@ export default async function HomePage() {
       <AnimatedSection className={styles.lebihDariSection} id="lebih-dari" delay={0.2}>
         <div className={styles.lebihDariHeader}>
           <h2 className={styles.lebihDariTitle}>
-            LEBIH DARI<br /> <span style={{ color: "var(--color-text-highlight)" }}>SEKEDAR</span><br />DESIGN
+            LEBIH DARI<br /> <span style={{ color: "var(--color-text-highlight)" }}>SEKADAR</span><br />DESIGN
           </h2>
           <p className={styles.lebihDariDesc}>
             Banyak yang menjual Jasa Pembuatan Website yang murah tapi anda tidak tahu layanan apa yang mereka berikan, Di sini Saya memberikan layanan optimal :
@@ -154,7 +154,7 @@ export default async function HomePage() {
             <div className={styles.caraKerjaStep}>
               <span className={styles.caraKerjaNumber}>1</span>
               <div className={styles.caraKerjaContent}>
-                <span className={styles.caraKerjaLabel}>Brief</span>
+                <span className={styles.caraKerjaLabel}>(Breif) Konsultasi & Konsep</span>
                 <p className={styles.caraKerjaText}>membahas bentuk copywriting dan Design untuk Website</p>
               </div>
             </div>
@@ -162,7 +162,7 @@ export default async function HomePage() {
             <div className={styles.caraKerjaStep}>
               <span className={styles.caraKerjaNumber}>2</span>
               <div className={styles.caraKerjaContent}>
-                <span className={styles.caraKerjaLabel}>UI/UX</span>
+                <span className={styles.caraKerjaLabel}>UI/UX (Desain & Tampilan)</span>
                 <p className={styles.caraKerjaText}>Desain prototype projek sesuai keinginan client</p>
               </div>
             </div>
