@@ -27,10 +27,16 @@ const portfolioData = [
     id: 'cp1',
     title: "Website Personal Kesehatan",
     category: "COMPANY PROFILE",
-    imageUrl: "/asset/bdn_tari.webp",
+    imageUrl: "/asset/webscreenshot/bdn_tari.webp",
     link: "https://www.bidantari.my.id",
+  },
+ {
+    id: 'cp2',
+    title: "Website Personal Travel Umroh",
+    category: "COMPANY PROFILE",
+    imageUrl: "/asset/webscreenshot/kiswah.webp",
+    link: "https://kiswah.id",
   }
- 
 
   // E-commerce
  
