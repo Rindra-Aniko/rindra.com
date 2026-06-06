@@ -14,12 +14,12 @@ const testimonials = [
     role: "Bidan Semurup",
   },
   {
-    initials: "BH",
-    imageUrl: "",
+    initials: "DR.HADIAL PUTRA",
+    imageUrl: "/testimoni/hadial.webp",
     quote:
       '" Dari awal pengajuan hingga website live, pengerjaan oleh Rindra Aniko sangat tepat waktu dan komunikasinya selalu transparan. Saya sebagai pemilik bisnis awam IT sangat terbantu dengan penjelasannya "',
-    name: "Budi Harsono",
-    role: "CEO PT Baju Bersama",
+    name: "DR. Hadial Putra",
+    role: "Komisaris Kiswah Tour & Travel",
   },
   {
     initials: "DP",
