@@ -13,9 +13,18 @@ export default function Footer() {
       <div className={styles.footerInner}>
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
-            <span className={styles.footerLogo}>
-              Rindra<span className={styles.footerLogoDot}> </span>Aniko
-            </span>
+            <Link href="/" className={styles.footerLogoContainer}>
+              <Image
+                src="/white_logo.svg"
+                alt="Logo Rindra Aniko"
+                width={48}
+                height={48}
+                className={styles.footerLogoIcon}
+              />
+              <span className={styles.footerLogo}>
+                Rindra<span className={styles.footerLogoDot}> </span>Aniko
+              </span>
+            </Link>
             <p className={styles.footerTagline}>
               Jasa Pembuatan Website Profesional & Solusi Digital Bisnis Anda
             </p>

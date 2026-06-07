@@ -21,10 +21,10 @@ export default function Header() {
       <div className={styles.headerInner}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           <Image
-            src="/favicon-3.png"
+            src="/r_logo.svg"
             alt="Logo Rindra Aniko"
-            width={32}
-            height={32}
+            width={35}
+            height={35}
             className={styles.logoIconImage}
             priority
           />
