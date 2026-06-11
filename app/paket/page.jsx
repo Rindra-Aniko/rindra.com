@@ -138,7 +138,7 @@ export default function PaketPage() {
             <div className={styles.daasRight}>
               <div className={styles.daasPricingCard}>
                 <div className={styles.daasPriceLabel}>Mulai Berlangganan</div>
-                <div className={styles.daasPrice}>Rp 2.500.000,-</div>
+                <div className={styles.daasPrice}>Rp 2.000.000,-</div>
                 <div className={styles.daasPriceSub}>per bulan (min. 12 bulan)</div>
                 <Link href="https://wa.me/6285163731467?text=Halo%20Kak%20Rindra%2C%20Saya%20tertarik%20dengan%20paket%20pembuatan%20website%20design%20as%20a%20service." target="_blank" className={styles.btnSolid}>
                   Pelajari Lebih Lanjut
