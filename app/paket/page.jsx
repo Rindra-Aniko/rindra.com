@@ -53,7 +53,7 @@ export default function PaketPage() {
             <div className={styles.pricingCard}>
               <h3 className={styles.cardTitle}>Landing Page Dasar</h3>
               <p className={styles.cardDesc}>Solusi cepat untuk validasi ide atau kampanye tunggal.</p>
-              <div className={styles.cardPrice}>Rp 1.500.000</div>
+              <div className={styles.cardPrice}>Rp 1.000.000</div>
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}><GreenCheck /> Single Page (Landing Page)</li>
                 <li className={styles.featureItem}><GreenCheck /> Desain Responsif (Mobile & Desktop)</li>
@@ -70,7 +70,7 @@ export default function PaketPage() {
               <div className={styles.badge}>Paling Populer</div>
               <h3 className={styles.cardTitle}>Website Company Profile</h3>
               <p className={styles.cardDesc}>Difokuskan pada kredibilitas bisnis profesional.</p>
-              <div className={styles.cardPrice}>Rp 5.000.000</div>
+              <div className={styles.cardPrice}>Rp 2.500.000</div>
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}><YellowCheck /> Multi-page Website (s/d 10 Halaman)</li>
                 <li className={styles.featureItem}><YellowCheck /> Premium UI/UX Design</li>
@@ -88,7 +88,7 @@ export default function PaketPage() {
               <h3 className={styles.cardTitle}>E-commerce</h3>
               <p className={styles.cardDesc}>Fitur toko online lengkap dan integrasi pembayaran.</p>
               <div className={styles.priceLabel}>Mulai Dari</div>
-              <div className={styles.cardPrice}>Rp 8.000.000</div>
+              <div className={styles.cardPrice}>Rp 5.000.000</div>
               <ul className={styles.featureList}>
                 <li className={styles.featureItem}><GreenCheck /> Sistem Toko Online Penuh</li>
                 <li className={styles.featureItem}><GreenCheck /> Integrasi Payment Gateway</li>

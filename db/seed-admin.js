@@ -13,17 +13,22 @@ async function seedAdmin() {
       .where(eq(admins.username, "admin"))
       .limit(1);
 
+    const hashedPassword = await bcrypt.hash("Kontrol301286", 10);
+
     if (existingAdmin.length > 0) {
-      console.log("Admin default sudah ada!");
+      await db
+        .update(admins)
+        .set({ password: hashedPassword })
+        .where(eq(admins.username, "admin"));
+      console.log("Password admin default berhasil diperbarui menjadi Kontrol301286!");
       process.exit(0);
     }
 
-    const hashedPassword = await bcrypt.hash("Exsit301286!@", 10);
     await db.insert(admins).values({
       username: "admin",
       password: hashedPassword,
     });
-    console.log("Admin default (admin / Exsit301286!@) berhasil ditambahkan!");
+    console.log("Admin default (admin / Kontrol301286) berhasil ditambahkan!");
     process.exit(0);
   } catch (error) {
     console.error("Gagal menambahkan admin:", error);
